@@ -1,0 +1,13 @@
+.button-group-container {
+  /* width: 500px; */
+  height: 500px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  /* background-color: blue; */
+  /* align-items: center; */
+}
+/* 
+.prperty-tab-button-group {
+  background-color: red;
+} */

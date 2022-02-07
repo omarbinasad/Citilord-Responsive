@@ -1,0 +1,197 @@
+/* .WelcomeDivcontainer {
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  box-shadow: -5px 6px 22px -10px rgba(0, 0, 0, 0.64);
+  -webkit-box-shadow: -5px 6px 22px -10px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: -5px 6px 22px -10px rgba(0, 0, 0, 0.64);
+}
+
+.heading-content {
+  background: rgb(15, 69, 66);
+  background: linear-gradient(
+    90deg,
+    rgba(15, 69, 66, 1) 17%,
+    rgb(94, 136, 78) 86%
+  );
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 60px 0 40px 0;
+}
+.heading-text {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: center;
+  transform: translateZ(15px);
+  margin: 10px;
+}
+.heading-text b {
+  color: #ffb91d;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.message {
+  font-weight: 300;
+  font-size: 18px;
+  margin-top: 40px;
+  text-align: justify;
+} */
+
+.welcome-box-container {
+  display: flex;
+  justify-content: center;
+}
+
+.animated-box {
+  /* font-family: "Chap"; */
+  /* color: lightseagreen; */
+  padding: 30px;
+  text-align: justify;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  background: rgb(15, 69, 66);
+  background: linear-gradient(
+    90deg,
+    rgba(15, 69, 66, 1) 17%,
+    rgb(94, 136, 78) 86%
+  );
+}
+
+.animated-box h1 {
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+}
+
+.animated-box p {
+  /* font-weight: bold; */
+  font-size: 17px;
+  color: white;
+}
+
+/* The animation starts here */
+.animated-box {
+  position: relative;
+  width: 75%;
+  justify-content: center;
+}
+
+.animated-box:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px;
+
+  background: linear-gradient(120deg, #00f260, #0575e6, #00f260);
+  background-size: 300% 300%;
+  clip-path: polygon(
+    0% 100%,
+    6px 100%,
+    6px 6px,
+    calc(100% - 6px) 6px,
+    calc(100% - 6px) calc(100% - 6px),
+    6px calc(100% - 6px),
+    6px 100%,
+    100% 100%,
+    100% 0%,
+    0% 0%
+  );
+}
+
+.animated-box.in:after {
+  animation: frame-enter 1s forwards ease-in-out reverse,
+    gradient-animation 4s ease-in-out infinite;
+}
+
+/* motion */
+@keyframes gradient-animation {
+  0% {
+    background-position: 15% 0%;
+  }
+  50% {
+    background-position: 85% 100%;
+  }
+  100% {
+    background-position: 15% 0%;
+  }
+}
+
+@keyframes frame-enter {
+  0% {
+    clip-path: polygon(
+      0% 100%,
+      6px 100%,
+      6px 6px,
+      calc(100% - 6px) 6px,
+      calc(100% - 6px) calc(100% - 6px),
+      6px calc(100% - 6px),
+      6px 100%,
+      100% 100%,
+      100% 0%,
+      0% 0%
+    );
+  }
+  25% {
+    clip-path: polygon(
+      0% 100%,
+      6px 100%,
+      6px 6px,
+      calc(100% - 6px) 6px,
+      calc(100% - 6px) calc(100% - 6px),
+      calc(100% - 6px) calc(100% - 6px),
+      calc(100% - 6px) 100%,
+      100% 100%,
+      100% 0%,
+      0% 0%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0% 100%,
+      6px 100%,
+      6px 6px,
+      calc(100% - 6px) 6px,
+      calc(100% - 6px) 6px,
+      calc(100% - 6px) 6px,
+      calc(100% - 6px) 6px,
+      calc(100% - 6px) 6px,
+      100% 0%,
+      0% 0%
+    );
+  }
+  75% {
+    clip-path: polygon(
+      0% 100%,
+      6px 100%,
+      6px 6px,
+      6px 6px,
+      6px 6px,
+      6px 6px,
+      6px 6px,
+      6px 6px,
+      6px 0%,
+      0% 0%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      0% 100%,
+      6px 100%,
+      6px 100%,
+      6px 100%,
+      6px 100%,
+      6px 100%,
+      6px 100%,
+      6px 100%,
+      6px 100%,
+      0% 100%
+    );
+  }
+}

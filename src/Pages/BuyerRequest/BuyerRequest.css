@@ -1,0 +1,50 @@
+.form-page {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-container {
+  width: 800px;
+  height: 650px;
+  display: flex;
+  /* padding: 20px; */
+  border-radius: 10px;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 20px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.form-heading {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.property-info-fields-colunm {
+  display: flex;
+  flex-direction: column;
+}
+
+.property-info-fields-row {
+  display: flex;
+}
+
+.personal-info-fields-colunm {
+  display: flex;
+  flex-direction: column;
+}
+
+.personal-info-fields-row {
+  display: flex;
+}
+.submit-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,14 @@
+.contact-banner {
+  /* margin-top: -90px; */
+}
+.contact-banner > img {
+  width: 100%;
+  height: 550px;
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-banner > img {
+    height: 200px;
+  }
+}

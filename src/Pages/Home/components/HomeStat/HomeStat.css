@@ -1,0 +1,29 @@
+.homestatemaincontainer {
+  display: flex;
+  justify-content: center;
+  /* margin-top: 20px; */
+}
+
+.homestateconatiner {
+  display: flex;
+  /* margin-top: 40px; */
+  /* padding: 20px; */
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  border: 2px solid #ece9eb;
+  box-shadow: 0px 0px 10px 0px rgba(156, 156, 156, 0.75);
+  width: 75%;
+
+  /* padding-bottom: 30px; */
+  /* margin-bottom: 20px; */
+}
+.counterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin: 20px; */
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}

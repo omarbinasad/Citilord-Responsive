@@ -1,0 +1,9 @@
+.home-state-chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 200px;
+  /* margin-bottom: 20px; */
+}

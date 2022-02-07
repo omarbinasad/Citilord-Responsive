@@ -1,0 +1,84 @@
+.custom-nav-container {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.custom-nav-bar {
+  background-color: rgb(0, 0, 0);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+.custom-nav-bar ul li a {
+  color: white !important;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+.custom-nav-bar ul li a:hover {
+  border-bottom: 3px solid rgb(14, 126, 14);
+  color: rgb(59, 177, 59) !important;
+}
+.custom-nav-bar ul li a.active {
+  border-bottom: 3px solid rgb(14, 126, 14);
+  color: rgb(59, 177, 59) !important;
+}
+
+.custom-nav-bar ul li {
+  margin-right: 30px;
+}
+.navbar-brand > img {
+  width: 150px;
+}
+.dropdown-menu {
+  background-color: rgba(19, 19, 19, 0.651);
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  animation: mymove 0.3s;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.404);
+}
+.dropdown-menu li a {
+  font-size: 1rem !important;
+}
+
+@keyframes mymove {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.dropdown-menu > li {
+  margin-right: 0 !important;
+}
+.dropdown-item:active {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+.my-citi-lord-btn {
+  background-color: rgb(223, 171, 0);
+  color: rgb(49, 49, 49);
+  font-weight: 700;
+}
+
+.drawer-icon-container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.drawer-icon {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
