@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./NavBar.css";
+
 import Logo from "../citiLordlogo.png.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   Button,
   Dialog,
@@ -14,7 +15,7 @@ import {
 import SearchShortlet from "../../../Pages/Home/components/DialogSearchBox/SearchShortlet/SearchShortlet";
 import SearchLonglet from "../../../Pages/Home/components/DialogSearchBox/SearchLonglet/SearchLonglet";
 import SearchForSale from "../../../Pages/Home/components/DialogSearchBox/SearchForSale/SearchForSale";
-import { Cancel, Close } from "@material-ui/icons";
+import { CallMissedSharp, Cancel, Close } from "@material-ui/icons";
 
 const NavBar = () => {
   const [state, setState] = useState(false);
@@ -62,9 +63,15 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item ">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <NavLink
+                  className={(navInfo) =>
+                    navInfo.isActive ? "nav-link active" : "nav-link"
+                  }
+                  aria-current="page"
+                  to="/"
+                >
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item dropdown">
                 <a
@@ -98,9 +105,9 @@ const NavBar = () => {
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/tenants">
+                <NavLink className="nav-link" to="/tenants">
                   Tenants
-                </Link>
+                </NavLink>
               </li>
 
               <li className="nav-item dropdown">
@@ -116,27 +123,27 @@ const NavBar = () => {
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <Link className="dropdown-item" to="/landlord-renter">
+                    <NavLink className="dropdown-item" to="/landlord-renter">
                       Renter
-                    </Link>
+                    </NavLink>
                   </li>
 
                   <li>
-                    <Link className="dropdown-item" to="/landlord-seller">
+                    <NavLink className="dropdown-item" to="/landlord-seller">
                       Seller
-                    </Link>
+                    </NavLink>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">
+                <NavLink className="nav-link" to="/about">
                   About
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/contact">
+                <NavLink className="nav-link" to="/contact">
                   Contact
-                </Link>
+                </NavLink>
               </li>
             </ul>
             <button className="my-citi-lord-btn btn btn-default" type="submit">

@@ -24,6 +24,7 @@
 .custom-nav-bar ul li a.active {
   border-bottom: 3px solid rgb(14, 126, 14);
   color: rgb(59, 177, 59) !important;
+  background-color: transparent;
 }
 
 .custom-nav-bar ul li {
