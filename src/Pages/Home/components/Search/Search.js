@@ -22,36 +22,38 @@ const Search = () => {
                 className="search-input"
               ></input>
             </div>
-            <Link to="/property-to-rent" style={{ textDecoration: "none" }}>
-              <Button
-                variant="contained"
-                color="primary"
-                size="large"
-                className="search-input-button"
-                style={{
-                  backgroundColor: "#FFAE00",
-                  color: "black",
-                  width: "150px",
-                }}
-              >
-                To Rent
-              </Button>
-            </Link>
-            <Link to="/property-for-sale" style={{ textDecoration: "none" }}>
-              <Button
-                variant="contained"
-                color="secondary"
-                size="large"
-                className="search-input-button"
-                style={{
-                  backgroundColor: "#5DB84C",
-                  color: "black",
-                  width: "150px",
-                }}
-              >
-                For Sale
-              </Button>
-            </Link>
+            <div className="home-search-btn-div">
+              <Link to="/property-to-rent" style={{ textDecoration: "none" }}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="large"
+                  className="search-input-button"
+                  style={{
+                    backgroundColor: "#FFAE00",
+                    color: "black",
+                    width: "150px",
+                  }}
+                >
+                  To Rent
+                </Button>
+              </Link>
+              <Link to="/property-for-sale" style={{ textDecoration: "none" }}>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  size="large"
+                  className="search-input-button"
+                  style={{
+                    backgroundColor: "#5DB84C",
+                    color: "black",
+                    width: "150px",
+                  }}
+                >
+                  For Sale
+                </Button>
+              </Link>
+            </div>
           </div>
           {/* <Autocomplete
           options={findByLet}

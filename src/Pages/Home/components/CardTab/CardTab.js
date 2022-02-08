@@ -35,19 +35,39 @@ const CardTab = (props) => {
         </TabList>
 
         <TabPanel value="1">
-          <div style={{ display: "flex" }}>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+            }}
+          >
             <Cards name="To Let" />
             <Cards name="To Let" />
             <Cards name="To Let" />
           </div>
         </TabPanel>
         <TabPanel value="2">
-          <Cards name="To Let" />
-          <Cards name="To Let" />
-          <Cards name="To Let" />
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+            }}
+          >
+            <Cards name="To Let" />
+            <Cards name="To Let" />
+            <Cards name="To Let" />
+          </div>
         </TabPanel>
         <TabPanel value="3">
-          <div style={{ display: "flex" }}>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+            }}
+          >
             <Cards name="Sell" />
             <Cards name="Sell" />
             <Cards name="Sell" />

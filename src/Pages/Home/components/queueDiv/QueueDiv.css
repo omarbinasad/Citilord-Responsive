@@ -128,3 +128,13 @@
     opacity: 0;
   }
 } */
+
+@media screen and (max-width: 768px) {
+  .buttonContainer {
+    flex-direction: column;
+  }
+  .buttonContainerSingle .custom-btn {
+    margin: 10px 0px 50px;
+    
+  }
+}
