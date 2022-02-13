@@ -22,42 +22,46 @@ import ForSaleProperties from "./Pages/ForSaleProperties/Page/ForSaleProperties"
 import PropertyDetail from "./Pages/PropertyDetail/Page/PropertyDetail";
 import GalleryPage from "./Pages/Gallery/Page/GalleryPage";
 import AllTeamMembers from "./Pages/AllTeamMembers/Page/AllTeamMembers";
+import AllProperties from "./Pages/AllProperties/Page/AllProperties";
 const App = () => {
   return (
-    <Router>
-      <ScrollToTop />
-      <NavBar />
-      <Routes>
-        <Route exact path="/" element={<Home />}></Route>
-        <Route path="/free-valuation" element={<FreeValuation />}></Route>
-        <Route path="/quick-response" element={<QuickResponse />}></Route>
-        <Route path="/property-for-sale" element={<ForSaleSearch />}></Route>
-        <Route path="/property-to-rent" element={<ToRentSearch />}></Route>
-        <Route path="/tenants" element={<Tenants />}></Route>
-        <Route
-          path="/tenant-registration"
-          element={<TenantRegistration />}
-        ></Route>
-        <Route path="/landlord-renter" element={<LandLordRenter />}></Route>
-        <Route path="/landlord-seller" element={<LandLordSeller />}></Route>
-        <Route path="/buyer-request" element={<BuyerRequest />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-        <Route
-          path="/all-properties-short-let"
-          element={<ToRentProperties />}
-        ></Route>
-        <Route path="/all-properties-long-let" element={<LongLet />}></Route>
-        <Route
-          path="/all-properties-for-sale"
-          element={<ForSaleProperties />}
-        ></Route>
-        <Route path="/property-details" element={<PropertyDetail />}></Route>
-        <Route path="/gallery" element={<GalleryPage />}></Route>
-        <Route path="/all-team-members" element={<AllTeamMembers />}></Route>
-      </Routes>
-      <Footer />
-    </Router>
+    <div className="App">
+      <Router>
+        <ScrollToTop />
+        <NavBar />
+        <Routes>
+          <Route exact path="/" element={<Home />}></Route>
+          <Route path="/free-valuation" element={<FreeValuation />}></Route>
+          <Route path="/quick-response" element={<QuickResponse />}></Route>
+          <Route path="/property-for-sale" element={<ForSaleSearch />}></Route>
+          <Route path="/property-to-rent" element={<ToRentSearch />}></Route>
+          <Route path="/tenants" element={<Tenants />}></Route>
+          <Route
+            path="/tenant-registration"
+            element={<TenantRegistration />}
+          ></Route>
+          <Route path="/landlord-renter" element={<LandLordRenter />}></Route>
+          <Route path="/landlord-seller" element={<LandLordSeller />}></Route>
+          <Route path="/buyer-request" element={<BuyerRequest />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+          <Route
+            path="/all-properties-short-let"
+            element={<ToRentProperties />}
+          ></Route>
+          <Route path="/all-properties-long-let" element={<LongLet />}></Route>
+          <Route
+            path="/all-properties-for-sale"
+            element={<ForSaleProperties />}
+          ></Route>
+          <Route path="/property-details" element={<PropertyDetail />}></Route>
+          <Route path="/gallery" element={<GalleryPage />}></Route>
+          <Route path="/all-team-members" element={<AllTeamMembers />}></Route>
+          <Route path="/all-properties" element={<AllProperties />}></Route>
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
   );
 };
 
