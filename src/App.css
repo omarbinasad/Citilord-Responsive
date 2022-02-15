@@ -1,6 +1,7 @@
 /* .App {
   text-align: center;
 } */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 *,
 *::before,
 *::after {
@@ -9,9 +10,11 @@
   box-sizing: border-box;
 }
 * {
-  font-family: "Chap", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-
+p {
+  font-weight: lighter !important;
+}
 legend {
   float: none;
 }
