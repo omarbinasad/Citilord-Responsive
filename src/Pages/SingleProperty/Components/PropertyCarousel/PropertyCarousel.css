@@ -1,0 +1,25 @@
+.property-carousel-container {
+  position: relative;
+  width: 50%;
+  height: 500px;
+}
+.property-carousel-inner img {
+  height: 500px;
+}
+.property-carousel-indicators {
+  background-color: rgba(0, 0, 0, 0.432);
+  backdrop-filter: blur(10px);
+  margin: 0;
+}
+.property-carousel-prev-btn,
+.property-carousel-next-btn {
+  width: 8%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.property-carousel-next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.363) !important;
+}
+.property-carousel-prev-btn:hover {
+  background-color: rgba(0, 0, 0, 0.363) !important;
+}

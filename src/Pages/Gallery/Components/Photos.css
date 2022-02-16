@@ -14,7 +14,6 @@
 }
 .image-thumbnail {
   /* display: inline-block; */
-
   flex: 1 0 24rem;
   margin: 1rem;
   box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
@@ -32,7 +31,7 @@
   transform: scale(1.15);
 }
 
-/*        Light Box Styling             */
+/*   Light Box Styling    */
 .light-box {
   z-index: 10;
   display: flex;
@@ -54,7 +53,6 @@
 .edges {
   width: 85%;
   height: 96%;
-
   background-color: rgba(235, 235, 235, 0.103);
   backdrop-filter: blur(6px);
   padding: 20px;
@@ -97,7 +95,9 @@
   float: left;
   left: 1%;
 }
-
+.close-btn {
+  z-index: 10 !important;
+}
 .close-btn > a {
   color: rgb(255, 255, 255);
   font-size: 40px;

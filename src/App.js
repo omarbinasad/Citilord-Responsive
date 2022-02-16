@@ -23,6 +23,7 @@ import PropertyDetail from "./Pages/PropertyDetail/Page/PropertyDetail";
 import GalleryPage from "./Pages/Gallery/Page/GalleryPage";
 import AllTeamMembers from "./Pages/AllTeamMembers/Page/AllTeamMembers";
 import AllProperties from "./Pages/AllProperties/Page/AllProperties";
+import SingleProperty from "./Pages/SingleProperty/Page/SingleProperty";
 const App = () => {
   return (
     <div className="App">
@@ -58,6 +59,7 @@ const App = () => {
           <Route path="/gallery" element={<GalleryPage />}></Route>
           <Route path="/all-team-members" element={<AllTeamMembers />}></Route>
           <Route path="/all-properties" element={<AllProperties />}></Route>
+          <Route path="/single-property" element={<SingleProperty />}></Route>
         </Routes>
         <Footer />
       </Router>

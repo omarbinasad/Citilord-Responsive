@@ -4,7 +4,7 @@ ul {
 }
 .footer-section {
   border-radius: 90px 0px 0px 0px;
-  /* background: #151414; */
+  background: #ffffff;
   box-shadow: -1px -2px 15px rgb(37, 36, 36);
   position: relative;
 }
