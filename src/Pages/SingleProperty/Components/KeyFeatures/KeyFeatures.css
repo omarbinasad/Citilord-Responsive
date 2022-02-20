@@ -1,0 +1,20 @@
+.key-features-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f1f0de;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.key-features-descr-div li {
+  /* list-style: none; */
+  margin-left: 30px;
+  font-size: 13px;
+}
+
+.key-features-title-div {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 10px;
+  border-bottom: 2px solid rgb(0, 0, 0);
+}

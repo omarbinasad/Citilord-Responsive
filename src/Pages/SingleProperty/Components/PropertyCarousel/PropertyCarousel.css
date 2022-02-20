@@ -1,7 +1,10 @@
 .property-carousel-container {
   position: relative;
-  width: 50%;
+  width: 950px;
   height: 500px;
+  margin-left: 20px;
+
+  margin-top: 20px;
 }
 .property-carousel-inner img {
   height: 500px;
