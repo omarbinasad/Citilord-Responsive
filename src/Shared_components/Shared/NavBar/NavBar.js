@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./NavBar.css";
-
-import Logo from "../citiLordlogo.png.png";
+// import Logo from "../citiLordlogo.png.png";
+import Logo from "./citilordLogo.png";
 import { NavLink } from "react-router-dom";
 import {
   Button,

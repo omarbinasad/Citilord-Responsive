@@ -60,10 +60,8 @@ const PropertyCarousel = () => {
           </div>
           <div className="carousel-item">
             <a href="#property-carousel-lightbox3">
-              {" "}
               <img src={propertyImg3} className=" d-block w-100" alt="..." />
             </a>
-
             <div className="carousel-caption d-none d-md-block">
               {/* <h5>Third slide label</h5>
               <p>
@@ -99,7 +97,6 @@ const PropertyCarousel = () => {
       </div>
       {/* <!-- Lightbox 01 --> */}
       <div className="light-box" id="property-carousel-lightbox1">
-        {" "}
         <span className="close-btn">
           <a href="#">
             <i className="fas fa-times"></i>
@@ -124,7 +121,6 @@ const PropertyCarousel = () => {
       </div>
       {/* <!-- Lightbox 02 --> */}
       <div className="light-box" id="property-carousel-lightbox2">
-        {" "}
         <span className="close-btn">
           <a href="#">
             <i className="fas fa-times"></i>
@@ -149,7 +145,6 @@ const PropertyCarousel = () => {
       </div>
       {/* <!-- Lightbox 03 --> */}
       <div className="light-box" id="property-carousel-lightbox3">
-        {" "}
         <span className="close-btn">
           <a href="#">
             <i className="fas fa-times"></i>
