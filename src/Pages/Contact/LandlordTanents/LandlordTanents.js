@@ -70,8 +70,8 @@ const LandlordTanents = () => {
     setOpen4(false);
   };
   return (
-    <div className="div-main-container">
-      <div className="div-contents">
+    <div className="land-lord-tanent-div-main-container">
+      <div className="land-lord-tanent-div-main-container-div-contents">
         <div className="landlord-section">
           <div>
             <h3 className="landlord-section-title">Landlord</h3>

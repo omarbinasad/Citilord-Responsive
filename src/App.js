@@ -24,7 +24,11 @@ import GalleryPage from "./Pages/Gallery/Page/GalleryPage";
 import AllTeamMembers from "./Pages/AllTeamMembers/Page/AllTeamMembers";
 import AllProperties from "./Pages/AllProperties/Page/AllProperties";
 import SingleProperty from "./Pages/SingleProperty/Page/SingleProperty";
+import ShortLetPage from "./Pages/AllProperties/Components/ShortletPage/ShortLetPage";
+import LongLetPage from "./Pages/AllProperties/Components/LongLetPage/LongLetPage";
+import SellPage from "./Pages/AllProperties/Components/SellPage/SellPage";
 import SingleRoom from "./Pages/SingleRoom/Page/SingleRoom";
+import AllRooms from "./Pages/AllRooms/AllRooms";
 const App = () => {
   return (
     <Router>
@@ -59,8 +63,16 @@ const App = () => {
         <Route path="/gallery" element={<GalleryPage />}></Route>
         <Route path="/all-team-members" element={<AllTeamMembers />}></Route>
         <Route path="/all-properties" element={<AllProperties />}></Route>
+
         <Route path="/single-property" element={<SingleProperty />}></Route>
+        <Route path="/all-properties/longlet" element={<LongLetPage />}></Route>
+        <Route
+          path="/all-properties/shortlet"
+          element={<ShortLetPage />}
+        ></Route>
+        <Route path="/all-properties/sell" element={<SellPage />}></Route>
         <Route path="/single-room" element={<SingleRoom />}></Route>
+        <Route path="/all-rooms" element={<AllRooms />}></Route>
       </Routes>
       <Footer />
     </Router>

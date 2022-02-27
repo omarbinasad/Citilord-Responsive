@@ -19,7 +19,7 @@
   /* box-shadow: 1px 3px 7px #4e4e4e; */
   border-radius: 5px;
   justify-content: center;
-  margin: 20px 0px 0px 0px;
+  margin: 18px 0px 0px 0px;
   /* padding: 20px; */
   position: relative;
   width: 100%;
@@ -206,10 +206,10 @@ hr {
     float: none;
     margin: 0 auto;
   }
-  .form-control,
+  /* .form-control,
   textarea {
     margin: 0 auto;
-  }
+  } */
 
   .name,
   .email,
@@ -240,5 +240,11 @@ hr {
 @media screen and (max-width: 410px) {
   .send-button {
     width: 99%;
+  }
+}
+/* for tabs, mini laptop/monitor */
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
   }
 }

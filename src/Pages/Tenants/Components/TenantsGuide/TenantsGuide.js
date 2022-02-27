@@ -9,7 +9,9 @@ const TenantsGuide = () => {
         <div className="bg-warning tenantsGuide-title-div">
           <h1 className="text-center">Services for Tenants</h1>
         </div>
-        <h4>TENANT'S GUIDE</h4>
+        <h4 style={{ marginBottom: "10px", marginTop: "10px" }}>
+          TENANT'S GUIDE
+        </h4>
         <div className="tenantsGuide-container d-flex">
           <div className="tenantsGuide-img-div">
             <img src={TenantsGuideImg} alt="" width="300" height="200" />

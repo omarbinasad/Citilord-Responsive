@@ -1,10 +1,21 @@
 import React from "react";
 import PropertyCard from "../Components/PropertyCard/PropertyCard";
-
+import "./AllProperties.css";
 const AllProperties = () => {
   return (
-    <div className="container">
-      <PropertyCard />
+    <div className="container all-properties-container">
+      <div className="proeprty-list-container">
+        <PropertyCard />
+        <PropertyCard />
+      </div>
+      <div className="proeprty-list-container">
+        <PropertyCard />
+        <PropertyCard />
+      </div>
+      <div className="proeprty-list-container">
+        <PropertyCard />
+        <PropertyCard />
+      </div>
     </div>
   );
 };

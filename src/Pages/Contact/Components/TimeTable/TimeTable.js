@@ -1,71 +1,9 @@
 // import Map from "../Map/Map";
 import "./TimeTable.css";
-import React, { useState } from "react";
+import React from "react";
+import Map from "../Map/Map";
 
-import {
-  Button,
-  createTheme,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-  makeStyles,
-  ThemeProvider,
-} from "@material-ui/core";
-import { green, yellow } from "@material-ui/core/colors";
-import { Link } from "react-router-dom";
-const theme = createTheme({
-  palette: {
-    color1: green,
-    color2: yellow,
-  },
-});
-const useStyles = makeStyles((theme) => ({
-  modal: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  paper: {
-    // backgroundColor: theme.palette.background.paper,
-    border: "2px solid #000",
-    // boxShadow: theme.shadows[5],
-    // padding: theme.spacing(2, 4, 3),
-  },
-}));
 const TimeTable = () => {
-  const classes = useStyles();
-  const [open, setOpen] = useState(false);
-  const [open2, setOpen2] = useState(false);
-  const [open3, setOpen3] = useState(false);
-  const [open4, setOpen4] = useState(false);
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-  const handleOpen2 = () => {
-    setOpen2(true);
-  };
-  const handleOpen3 = () => {
-    setOpen3(true);
-  };
-  const handleOpen4 = () => {
-    setOpen4(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-  const handleClose2 = () => {
-    setOpen2(false);
-  };
-  const handleClose3 = () => {
-    setOpen3(false);
-  };
-  const handleClose4 = () => {
-    setOpen4(false);
-  };
   return (
     <div className="timtable-container-main">
       <p className="">
@@ -77,46 +15,7 @@ const TimeTable = () => {
         management services, our friendly staff will be more than happy to offer
         their advice and expertise.
       </p>
-      <div className="contact-text-div">
-        {/* <div className="contact-text-inner-div col-lg-4 me-3 px-3">
-          <h3 className="">Holiday Message</h3>
-          <p></p>
-        </div> */}
-        <div className="contact-text-inner-div col-lg-3 px-3 ">
-          <h3 className="text-center">Repair and Maintenance</h3>
-          <p>
-            Citi Lord property management is separate from lettings office.For
-            any kind of repairs please report a problem through our website
-            repairs. if you call to lettings department they wont be able to
-            help. but we always recommend you to report the problem via our
-            repairs system.
-          </p>
-        </div>
-        <div className="contact-text-inner-div col-lg-3 mx-3 px-3">
-          <h3 className="text-center">Official Enquiries</h3>
-          <p>
-            Please note that citi lord ltd do not keep any existing tenants
-            information after 1 month of tenancy termination. For any enquiries
-            regarding council tax or information about present or existing
-            tenants, please contact us
-          </p>
-        </div>
-        <div className="contact-text-inner-div col-lg-3 me-3 px-3">
-          <h3 className="text-center">Tenant's Reference</h3>
-          <p>
-            If you require any references for any of our existing tenants,
-            please bear in mind that City Lord does not hold any tenancy
-            information 1 month after the tenancy termination. Therefore, if you
-            are a tenant or an organisation that require tenancy references,
-            please contact us
-          </p>
-        </div>
 
-        <div className="contact-text-inner-div col-lg-3 px-3">
-          <h3 className="text-center">Holiday Message</h3>
-          <p></p>
-        </div>
-      </div>
       <div className="contact-text-div d-flex mt-3">
         {/* map  */}
         {/* <div className="contact-text-inner-div col-lg-3 p-3">
@@ -164,7 +63,77 @@ const TimeTable = () => {
             </tbody>
           </table>
         </div>
-        <div className="contact-text-inner-div d-flex justify-content-center align-items-center col-lg-4 mx-3 p-3">
+        {/* map  */}
+        <div className="contact-text-inner-div col-lg-4 mx-3 p-2">
+          <Map></Map>
+        </div>
+        {/*-  contact Right Container-*/}
+        <div className="contact-text-inner-div col-lg-4 p-3">
+          <div className="direct-contact-container">
+            <ul className="contact-list">
+              <li className="list-item">
+                <i className="fa fa-map-marker fa-2x">
+                  <span className="contact-text place">
+                    41 Burdett Road, Mile End, London E3 4TN
+                  </span>
+                </i>
+              </li>
+              <li className="list-item">
+                <i className="fas fa-mobile-alt">
+                  <span className="contact-text phone">
+                    <a href="tel:07484190446" title="Give me a call">
+                      07484190446 (Letting Enquiry)
+                    </a>
+                  </span>
+                </i>
+              </li>
+              <li className="list-item">
+                <i className="fa fa-phone fa-2x">
+                  <span className="contact-text phone">
+                    <a href="tel:02089804988" title="Give me a call">
+                      02089804988
+                    </a>
+                  </span>
+                </i>
+              </li>
+
+              <li className="list-item">
+                <i className="fa fa-envelope fa-2x">
+                  <span className="contact-text gmail">
+                    <a href="mailto:#" title="Send me an email">
+                      mileend@citilord.co.uk
+                    </a>
+                  </span>
+                </i>
+              </li>
+            </ul>
+
+            <hr />
+            <ul className="social-media-list">
+              <li>
+                <a href="#" target="_blank" className="contact-icon">
+                  <i className="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" className="contact-icon">
+                  <i className="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" className="contact-icon">
+                  <i className="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" className="contact-icon">
+                  <i className="fab fa-youtube"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {/* <div className="contact-text-inner-div d-flex justify-content-center align-items-center col-lg-4 mx-3 p-3">
           <div className="landlord-section">
             <div>
               <h3 className="landlord-section-title">Landlord</h3>
@@ -243,10 +212,10 @@ const TimeTable = () => {
               </ThemeProvider>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Modal start */}
 
-        <Dialog
+        {/* <Dialog
           open={open}
           onClose={handleClose}
           aria-labelledby="alert-dialog-title"
@@ -262,15 +231,13 @@ const TimeTable = () => {
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose}>Close</Button>
-            {/* <Button onClick={handleClose} autoFocus>
-            Agree
-          </Button> */}
+           
           </DialogActions>
-        </Dialog>
+        </Dialog> */}
 
         {/* Modal end */}
 
-        <Dialog
+        {/* <Dialog
           open={open2}
           onClose={handleClose2}
           aria-labelledby="alert-dialog-title"
@@ -292,9 +259,7 @@ const TimeTable = () => {
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose2}>Close</Button>
-            {/* <Button onClick={handleClose2} autoFocus>
-            Agree
-          </Button> */}
+            
           </DialogActions>
         </Dialog>
 
@@ -318,15 +283,13 @@ const TimeTable = () => {
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose3}>Close</Button>
-            {/* <Button onClick={handleClose} autoFocus>
-            Agree
-          </Button> */}
+            
           </DialogActions>
-        </Dialog>
+        </Dialog> */}
 
         {/* Modal end */}
 
-        <Dialog
+        {/* <Dialog
           open={open4}
           onClose={handleClose4}
           aria-labelledby="alert-dialog-title"
@@ -352,11 +315,49 @@ const TimeTable = () => {
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose4}>Close</Button>
-            {/* <Button onClick={handleClose2} autoFocus>
-            Agree
-          </Button> */}
+          
           </DialogActions>
-        </Dialog>
+        </Dialog> */}
+      </div>
+      <div className="contact-text-div mt-3">
+        {/* <div className="contact-text-inner-div col-lg-4 me-3 px-3">
+          <h3 className="">Holiday Message</h3>
+          <p></p>
+        </div> */}
+        <div className="contact-text-inner-div col-lg-3 px-3 me-1 ">
+          <h3 className="text-center">Repair and Maintenance</h3>
+          <p>
+            Citi Lord property management is separate from lettings office.For
+            any kind of repairs please report a problem through our website
+            repairs. if you call to lettings department they wont be able to
+            help. but we always recommend you to report the problem via our
+            repairs system.
+          </p>
+        </div>
+        <div className="contact-text-inner-div col-lg-3 mx-2 px-3">
+          <h3 className="text-center">Official Enquiries</h3>
+          <p>
+            Please note that citi lord ltd do not keep any existing tenants
+            information after 1 month of tenancy termination. For any enquiries
+            regarding council tax or information about present or existing
+            tenants, please contact us
+          </p>
+        </div>
+        <div className="contact-text-inner-div col-lg-3 ms-1 me-2 px-3">
+          <h3 className="text-center">Tenant's Reference</h3>
+          <p>
+            If you require any references for any of our existing tenants,
+            please bear in mind that City Lord does not hold any tenancy
+            information 1 month after the tenancy termination. Therefore, if you
+            are a tenant or an organisation that require tenancy references,
+            please contact us
+          </p>
+        </div>
+
+        <div className="contact-text-inner-div col-lg-3 px-3 ms-1">
+          <h3 className="text-center">Holiday Message</h3>
+          <p></p>
+        </div>
       </div>
     </div>
   );

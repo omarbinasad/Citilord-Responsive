@@ -23,7 +23,7 @@ const SearchShortlet = (props) => {
             size="large"
             className="search-input-button-div"
             style={{
-              backgroundColor: "#FFAE00",
+              backgroundColor: "#FACC2E",
               color: "black",
               width: "150px",
             }}

@@ -2,6 +2,7 @@ import { Badge } from "@material-ui/core";
 import { KingBed } from "@material-ui/icons";
 import React from "react";
 import "./Cards.css";
+import { Link } from "react-router-dom";
 
 const Cards = (props) => {
   return (
@@ -12,7 +13,7 @@ const Cards = (props) => {
         horizontal: "left",
       }}
       color="primary"
-      style={{ margin: "30px" }}
+      // style={{ margin: "30px" }}
     >
       <div className="card">
         <div className="img"></div>
@@ -57,7 +58,9 @@ const Cards = (props) => {
           {/* bottom icon container end */}
 
           <a>
-            <button>View More</button>
+            <Link to="/single-property">
+              <button>View More</button>
+            </Link>
           </a>
         </div>
       </div>

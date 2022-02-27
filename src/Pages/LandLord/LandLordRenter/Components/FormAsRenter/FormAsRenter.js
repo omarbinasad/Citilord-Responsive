@@ -11,6 +11,7 @@ import React, { useState } from "react";
 import "./FormAsRenter.css";
 import { Add, AddBox, IndeterminateCheckBox, Send } from "@material-ui/icons";
 import Autocomplete from "@material-ui/lab/Autocomplete";
+import { useForm } from "react-hook-form";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -50,7 +51,7 @@ const FormAsRenter = () => {
       roadNumber: "",
       postcode: "",
       city: "",
-      propertyType: "",
+      buildingType: "",
       houseType: "",
       bedrooms: "",
       bathrooms: "",
@@ -87,7 +88,7 @@ const FormAsRenter = () => {
         roadNumber: "",
         postcode: "",
         city: "",
-        propertyType: "",
+        buildingType: "",
         houseType: "",
         bedrooms: "",
         bathrooms: "",
@@ -108,6 +109,17 @@ const FormAsRenter = () => {
     newInputFields.splice(index, 1);
     setInputFields(newInputFields);
   };
+
+  const {
+    register,
+    formState: { errors },
+    watch,
+    setValue,
+  } = useForm({
+    defaultValues: {
+      check: false,
+    },
+  });
 
   return (
     <div className="landlord-renter-form-container">
@@ -140,7 +152,16 @@ const FormAsRenter = () => {
             ></TextField>
             <TextField
               name="phoneNumber"
-              label="Telephone Number"
+              label="Contact Number"
+              variant="outlined"
+              size="small"
+              className={classes.textField}
+              // value={inputFields.firstName}
+              // onChange={(event) => handleChangeInput(event)}
+            ></TextField>
+            <TextField
+              name="phoneNumber"
+              label="Alt. Contact Number"
               variant="outlined"
               size="small"
               className={classes.textField}
@@ -156,6 +177,8 @@ const FormAsRenter = () => {
               // value={inputFields.firstName}
               // onChange={(event) => handleChangeInput(event)}
             ></TextField>
+          </div>
+          <div>
             <TextField
               id="time"
               label="Best Time to Contact"
@@ -220,6 +243,25 @@ const FormAsRenter = () => {
                   onChange={(event) => handleChangeInput(event, index)}
                 ></TextField>
                 <Autocomplete
+                  {...register("buildingTypes", {})}
+                  id="combo-box-demo"
+                  options={buildingTypes}
+                  getOptionLabel={(option) => option.type}
+                  size="small"
+                  style={{ width: 200 }}
+                  className={classes.textFieldAuto}
+                  renderInput={(params) => (
+                    <TextField
+                      {...params}
+                      label="Building Type"
+                      variant="outlined"
+                    />
+                  )}
+                />
+              </div>
+              <div className="row-section">
+                <Autocomplete
+                  {...register("houseTypes", {})}
                   id="combo-box-demo"
                   options={houseTypes}
                   getOptionLabel={(option) => option.type}
@@ -231,11 +273,10 @@ const FormAsRenter = () => {
                       {...params}
                       label="House Type"
                       variant="outlined"
+                      disabled={watch("buildingType") === "flat"}
                     />
                   )}
                 />
-              </div>
-              <div className="row-section">
                 <Autocomplete
                   id="combo-box-demo"
                   options={bedrooms}
@@ -288,6 +329,9 @@ const FormAsRenter = () => {
                     <TextField {...params} label="Lift" variant="outlined" />
                   )}
                 />
+              </div>
+
+              <div className="row-section">
                 <Autocomplete
                   id="combo-box-demo"
                   options={driveWays}
@@ -303,8 +347,6 @@ const FormAsRenter = () => {
                     />
                   )}
                 />
-              </div>
-              <div className="row-section">
                 <Autocomplete
                   id="combo-box-demo"
                   options={gardens}
@@ -331,7 +373,7 @@ const FormAsRenter = () => {
                     />
                   )}
                 />
-                <Autocomplete
+                {/* <Autocomplete
                   id="combo-box-demo"
                   options={chainFree}
                   getOptionLabel={(option) => option.type}
@@ -345,7 +387,7 @@ const FormAsRenter = () => {
                       variant="outlined"
                     />
                   )}
-                />
+                /> */}
                 <TextField
                   id="date"
                   label="Available Date"
@@ -409,6 +451,7 @@ const buildingTypes = [
   { type: "Apartment" },
   { type: "Cottage" },
   { type: "Villa" },
+  { type: "Penthouse" },
 ];
 
 const houseTypes = [

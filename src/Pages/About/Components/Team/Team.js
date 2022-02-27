@@ -7,14 +7,18 @@ import "./Team.css";
 const Team = () => {
   return (
     <div>
-      <h1
+      {/* <h1
         className="text-center"
         style={{ fontWeight: "bold", marginLeft: "70px" }}
       >
         Team Members
-      </h1>
+      </h1> */}
+
       <section className="our-team-section">
         <div className="container">
+          <h1 className="text-center" style={{ fontWeight: "bold" }}>
+            Team Members
+          </h1>
           <div className="row">
             <SingleTeamMember></SingleTeamMember>
             <SingleTeamMember></SingleTeamMember>

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./CardTab.css";
 import { TabContext, TabList, TabPanel } from "@material-ui/lab";
-import { makeStyles, Tab } from "@material-ui/core";
+import { Button, makeStyles, Tab } from "@material-ui/core";
 import Cards from "../Cards/Cards";
+import { Link } from "react-router-dom";
 
 const useStyle = makeStyles((theme) => ({
   tabText: {
@@ -22,7 +23,7 @@ const CardTab = (props) => {
   };
 
   return (
-    <div className="CardTabcontainer">
+    <div className="container CardTabcontainer">
       <div className="text">Available Properties</div>
 
       {/* Card Tab */}
@@ -36,11 +37,12 @@ const CardTab = (props) => {
 
         <TabPanel value="1">
           <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "center",
-            }}
+            className="cards-wraper"
+            // style={{
+            //   display: "flex",
+            //   flexWrap: "wrap",
+            //   justifyContent: "center",
+            // }}
           >
             <Cards name="To Let" />
             <Cards name="To Let" />
@@ -49,11 +51,12 @@ const CardTab = (props) => {
         </TabPanel>
         <TabPanel value="2">
           <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "center",
-            }}
+            className="cards-wraper"
+            // style={{
+            //   display: "flex",
+            //   flexWrap: "wrap",
+            //   justifyContent: "center",
+            // }}
           >
             <Cards name="To Let" />
             <Cards name="To Let" />
@@ -62,11 +65,12 @@ const CardTab = (props) => {
         </TabPanel>
         <TabPanel value="3">
           <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "center",
-            }}
+            className="cards-wraper"
+            // style={{
+            //   display: "flex",
+            //   flexWrap: "wrap",
+            //   justifyContent: "center",
+            // }}
           >
             <Cards name="Sell" />
             <Cards name="Sell" />
@@ -76,6 +80,73 @@ const CardTab = (props) => {
       </TabContext>
 
       {/* Card Tab End*/}
+      {/* View All Property Button Start */}
+      <div
+        className="cards-view-all-btns-div"
+        //  style={{ display: "flex" }}
+      >
+        <Link to="/all-properties/shortlet" style={{ textDecoration: "none" }}>
+          <Button
+          // style={{
+          //   width: "250px",
+          //   height: "50px",
+          //   color: "black",
+          //   fontWeight: "bold",
+          //   backgroundColor: "lightgreen",
+          //   marginBottom: "20px",
+          //   marginLeft: "20px",
+          // }}
+          >
+            View Short Let Properties
+          </Button>
+        </Link>
+        <Link to="/all-properties/longlet" style={{ textDecoration: "none" }}>
+          <Button
+          // style={{
+          //   width: "250px",
+          //   height: "50px",
+          //   color: "black",
+          //   fontWeight: "bold",
+          //   backgroundColor: "lightgreen",
+          //   marginBottom: "20px",
+          //   marginLeft: "20px",
+          // }}
+          >
+            View Long Let Properties
+          </Button>
+        </Link>
+        <Link to="/all-properties/sell" style={{ textDecoration: "none" }}>
+          <Button
+          // style={{
+          //   width: "250px",
+          //   height: "50px",
+          //   color: "black",
+          //   fontWeight: "bold",
+          //   backgroundColor: "lightgreen",
+          //   marginBottom: "20px",
+          //   marginLeft: "20px",
+          // }}
+          >
+            View Sell Properties
+          </Button>
+        </Link>
+        <Link to="/all-rooms" style={{ textDecoration: "none" }}>
+          <Button
+          // style={{
+          //   width: "250px",
+          //   height: "50px",
+          //   color: "black",
+          //   fontWeight: "bold",
+          //   backgroundColor: "lightgreen",
+          //   marginBottom: "20px",
+          //   marginLeft: "20px",
+          // }}
+          >
+            View All Rooms
+          </Button>
+        </Link>
+      </div>
+      {/* View All Property Button End */}
     </div>
   );
 };

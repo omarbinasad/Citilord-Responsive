@@ -196,6 +196,7 @@ const FreeValuation = () => {
                   Are you the legal owner of the property?
                 </FormLabel>
                 <RadioGroup
+                  className="radio-btn-wraper"
                   row
                   // aria-labelledby="demo-row-radio-buttons-group-label"
                   // name="row-radio-buttons-group"
@@ -218,6 +219,7 @@ const FreeValuation = () => {
                   What are you looking for?
                 </FormLabel>
                 <RadioGroup
+                  className="radio-btn-wraper"
                   row
                   // aria-labelledby="demo-row-radio-buttons-group-label"
                   // name="row-radio-buttons-group"

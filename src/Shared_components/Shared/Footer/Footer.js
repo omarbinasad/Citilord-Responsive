@@ -57,7 +57,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="footer-content pt-5 pb-5">
+          <div className="footer-content pt-4 pb-4">
             <div className="row">
               <div className="col-xl-3 col-lg-3 mb-50">
                 <div className="footer-widget">
@@ -148,8 +148,8 @@ const Footer = () => {
           <div className="container">
             <div className="row">
               <div className="col-xl-12 col-lg-12 text-center text-lg-left">
-                <div className="copyright-text">
-                  <p>
+                <div className="copyright-text-div">
+                  <p className="footer-copiright-text">
                     &copy; Citi Lord 2022 ALL RIGHTS RESERVED | Developed
                     by&nbsp;
                     <a href="https://optimisticsolutions.co.uk/">

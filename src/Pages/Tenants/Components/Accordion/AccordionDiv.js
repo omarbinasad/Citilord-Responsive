@@ -1,4 +1,5 @@
 import React from "react";
+import "./AccordionDiv.css";
 import {
   Accordion,
   AccordionSummary,
@@ -46,12 +47,13 @@ const AccordionDiv = () => {
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
             id="panel1a-header"
-            style={{
-              backgroundColor: "#FFB91D",
-              borderBottom: "5px solid black",
-              marginBottom: "10px",
-              borderRadius: "10px",
-            }}
+            // style={{
+            //   // backgroundColor: "#FFB91D",
+            //   borderBottom: "5px solid black",
+            //   marginBottom: "10px",
+            //   borderRadius: "10px",
+            // }}
+            className="glass-effect"
           >
             <Typography className={classes.heading}>
               Student Tenants and Guarantors
@@ -69,12 +71,13 @@ const AccordionDiv = () => {
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
             id="panel1a-header"
-            style={{
-              backgroundColor: "#FFB91D",
-              borderBottom: "5px solid black",
-              marginBottom: "10px",
-              borderRadius: "10px",
-            }}
+            // style={{
+            //   backgroundColor: "#FFB91D",
+            //   borderBottom: "5px solid black",
+            //   marginBottom: "10px",
+            //   borderRadius: "10px",
+            // }}
+            className="glass-effect"
           >
             <Typography className={classes.heading}>Identification</Typography>
           </AccordionSummary>
@@ -89,12 +92,13 @@ const AccordionDiv = () => {
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
             id="panel1a-header"
-            style={{
-              backgroundColor: "#FFB91D",
-              borderBottom: "5px solid black",
-              marginBottom: "10px",
-              borderRadius: "10px",
-            }}
+            // style={{
+            //   backgroundColor: "#FFB91D",
+            //   borderBottom: "5px solid black",
+            //   marginBottom: "10px",
+            //   borderRadius: "10px",
+            // }}
+            className="glass-effect"
           >
             <Typography className={classes.heading}>Furnishings</Typography>
           </AccordionSummary>
@@ -109,12 +113,13 @@ const AccordionDiv = () => {
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
             id="panel1a-header"
-            style={{
-              backgroundColor: "#FFB91D",
-              borderBottom: "5px solid black",
-              marginBottom: "10px",
-              borderRadius: "10px",
-            }}
+            // style={{
+            //   backgroundColor: "#FFB91D",
+            //   borderBottom: "5px solid black",
+            //   marginBottom: "10px",
+            //   borderRadius: "10px",
+            // }}
+            className="glass-effect"
           >
             <Typography className={classes.heading}>
               Faults and Repairs
@@ -131,12 +136,13 @@ const AccordionDiv = () => {
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
             id="panel1a-header"
-            style={{
-              backgroundColor: "#FFB91D",
-              borderBottom: "5px solid black",
-              marginBottom: "10px",
-              borderRadius: "10px",
-            }}
+            // style={{
+            //   backgroundColor: "#FFB91D",
+            //   borderBottom: "5px solid black",
+            //   marginBottom: "10px",
+            //   borderRadius: "10px",
+            // }}
+            className="glass-effect"
           >
             <Typography className={classes.heading}>
               Safety Regulations
@@ -153,12 +159,13 @@ const AccordionDiv = () => {
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
             id="panel1a-header"
-            style={{
-              backgroundColor: "#FFB91D",
-              borderBottom: "5px solid black",
-              marginBottom: "10px",
-              borderRadius: "10px",
-            }}
+            // style={{
+            //   backgroundColor: "#FFB91D",
+            //   borderBottom: "5px solid black",
+            //   marginBottom: "10px",
+            //   borderRadius: "10px",
+            // }}
+            className="glass-effect"
           >
             <Typography className={classes.heading}>
               Important Information for Tenants

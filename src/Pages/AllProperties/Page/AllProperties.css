@@ -1,0 +1,18 @@
+.proeprty-list-container {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+.all-properties-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .proeprty-list-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

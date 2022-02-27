@@ -1,6 +1,7 @@
 import { Button, TextField } from "@material-ui/core";
 import { Autocomplete } from "@material-ui/lab";
 import React from "react";
+// import "./ToRentSearch.css";
 
 const ToRentSearch = () => {
   return (
@@ -46,7 +47,7 @@ const ToRentSearch = () => {
             </div>
           </div>
           <div className="bed-input-container">
-            <span className="field-title" style={{ marginLeft: "-60px" }}>
+            <span className="field-title" style={{ marginLeft: "-57px" }}>
               Number of Bedrooms
             </span>
             <div className="input-field">

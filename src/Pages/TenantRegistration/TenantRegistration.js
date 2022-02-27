@@ -31,183 +31,185 @@ const TenantRegistration = () => {
         {/* persoanl details start */}
         <div className="form-sections">
           <div className="form-sections-1st-2">
-            <div className="section-separator"></div>
-            <div className="personal-details-div">
-              <span className="section-heading">Your details</span>
-              <div className={classes.item}>
-                <TextField
-                  id="outlined-basic"
-                  label="First Name"
-                  variant="outlined"
-                  size="small"
-                  style={{ width: "36vh" }}
-                />
-              </div>
-              <div className={classes.item}>
-                <TextField
-                  id="outlined-basic"
-                  label="Last Name"
-                  variant="outlined"
-                  size="small"
-                  style={{ width: "36vh" }}
-                />
-              </div>
-              <div className={classes.item}>
-                <TextField
-                  id="outlined-basic"
-                  label="Contact Number"
-                  variant="outlined"
-                  size="small"
-                  style={{ width: "36vh" }}
-                />
-              </div>
-              <div className={classes.item}>
-                <TextField
-                  id="outlined-basic"
-                  label="Email"
-                  variant="outlined"
-                  size="small"
-                  style={{ width: "36vh" }}
-                />
-              </div>
-              <div className={classes.item}>
-                <TextField
-                  id="outlined-basic"
-                  label="Profession"
-                  variant="outlined"
-                  size="small"
-                  style={{ width: "36vh" }}
-                />
+            <div className="form-sections-inner">
+              <div className="section-separator mt-5"></div>
+              <div className="personal-details-div">
+                <span className="section-heading">Your details</span>
+                <div className={classes.item}>
+                  <TextField
+                    id="outlined-basic"
+                    label="First Name"
+                    variant="outlined"
+                    size="small"
+                    style={{ width: "36vh" }}
+                  />
+                </div>
+                <div className={classes.item}>
+                  <TextField
+                    id="outlined-basic"
+                    label="Last Name"
+                    variant="outlined"
+                    size="small"
+                    style={{ width: "36vh" }}
+                  />
+                </div>
+                <div className={classes.item}>
+                  <TextField
+                    id="outlined-basic"
+                    label="Contact Number"
+                    variant="outlined"
+                    size="small"
+                    style={{ width: "36vh" }}
+                  />
+                </div>
+                <div className={classes.item}>
+                  <TextField
+                    id="outlined-basic"
+                    label="Email"
+                    variant="outlined"
+                    size="small"
+                    style={{ width: "36vh" }}
+                  />
+                </div>
+                <div className={classes.item}>
+                  <TextField
+                    id="outlined-basic"
+                    label="Profession"
+                    variant="outlined"
+                    size="small"
+                    style={{ width: "36vh" }}
+                  />
+                </div>
               </div>
             </div>
             {/* Personl details end */}
-            <div className="section-separator"></div>
-
-            {/* Expected requirements start  */}
-
-            <div className="requiremenets-div">
-              <span className="section-heading">Expected requirements</span>
-              <div className={classes.item}>
-                <TextField
-                  id="outlined-basic"
-                  label="Post Code"
-                  variant="outlined"
-                  size="small"
-                  style={{ width: "36vh" }}
-                />
-              </div>
-              <div className={classes.item}>
-                <Autocomplete
-                  id="combo-box-demo"
-                  options={maxRent}
-                  getOptionLabel={(option) => option.value}
-                  style={{ width: "36vh" }}
-                  size="small"
-                  renderInput={(params) => (
-                    <TextField
-                      {...params}
-                      label="Expected Rent Per Month (£)"
-                      variant="outlined"
-                    />
-                  )}
-                />
-              </div>
-              <div className={classes.item}>
-                <Autocomplete
-                  id="combo-box-demo"
-                  options={bedNumber}
-                  getOptionLabel={(option) => option.bed}
-                  style={{ width: "36vh" }}
-                  size="small"
-                  renderInput={(params) => (
-                    <TextField
-                      {...params}
-                      label="No. of Bedrooms"
-                      variant="outlined"
-                    />
-                  )}
-                />
-              </div>
-              <div className={classes.item}>
-                <Autocomplete
-                  id="combo-box-demo"
-                  options={numberofOccupy}
-                  getOptionLabel={(option) => option.value}
-                  style={{ width: "36vh" }}
-                  size="small"
-                  renderInput={(params) => (
-                    <TextField
-                      {...params}
-                      label="No. of Occupy"
-                      variant="outlined"
-                    />
-                  )}
-                />
-              </div>
-              <div className={classes.item}>
-                <TextField
-                  id="outlined-basic"
-                  label="Additional Information"
-                  variant="outlined"
-                  size="small"
-                  style={{ width: "36vh" }}
-                />
+            <div className="form-sections-inner">
+              <div className="section-separator mt-5"></div>
+              {/* Expected requirements start  */}
+              <div className="requiremenets-div">
+                <span className="section-heading">Expected requirements</span>
+                <div className={classes.item}>
+                  <TextField
+                    id="outlined-basic"
+                    label="Post Code"
+                    variant="outlined"
+                    size="small"
+                    style={{ width: "36vh" }}
+                  />
+                </div>
+                <div className={classes.item}>
+                  <Autocomplete
+                    id="combo-box-demo"
+                    options={maxRent}
+                    getOptionLabel={(option) => option.value}
+                    style={{ width: "36vh" }}
+                    size="small"
+                    renderInput={(params) => (
+                      <TextField
+                        {...params}
+                        label="Expected Rent Per Month (£)"
+                        variant="outlined"
+                      />
+                    )}
+                  />
+                </div>
+                <div className={classes.item}>
+                  <Autocomplete
+                    id="combo-box-demo"
+                    options={bedNumber}
+                    getOptionLabel={(option) => option.bed}
+                    style={{ width: "36vh" }}
+                    size="small"
+                    renderInput={(params) => (
+                      <TextField
+                        {...params}
+                        label="No. of Bedrooms"
+                        variant="outlined"
+                      />
+                    )}
+                  />
+                </div>
+                <div className={classes.item}>
+                  <Autocomplete
+                    id="combo-box-demo"
+                    options={numberofOccupy}
+                    getOptionLabel={(option) => option.value}
+                    style={{ width: "36vh" }}
+                    size="small"
+                    renderInput={(params) => (
+                      <TextField
+                        {...params}
+                        label="No. of Occupy"
+                        variant="outlined"
+                      />
+                    )}
+                  />
+                </div>
+                <div className={classes.item}>
+                  <TextField
+                    id="outlined-basic"
+                    label="Additional Information"
+                    variant="outlined"
+                    size="small"
+                    style={{ width: "36vh" }}
+                  />
+                </div>
               </div>
             </div>
 
             {/* Expected requirments end */}
-            <div className="section-separator"></div>
-
             {/* Moving date start */}
-
             {/* Moving date end */}
-          </div>
-          <div className="moving-date-div">
-            <span className="section-heading">Moving date</span>
-            <div className="field-and-button-container">
-              <div className={classes.item}>
-                <TextField
-                  id="date"
-                  label="Moving Date From"
-                  type="date"
-                  defaultValue="2022-01-28"
-                  style={{ width: "36vh" }}
-                  variant="outlined"
-                  size="small"
-                  // className={classes.textField}
-                  InputLabelProps={{
-                    shrink: true,
-                  }}
-                />
-              </div>
-              <div className={classes.item}>
-                <TextField
-                  id="date"
-                  label="Moving Date To"
-                  type="date"
-                  defaultValue="2022-01-28"
-                  style={{ width: "36vh" }}
-                  variant="outlined"
-                  size="small"
-                  // className={classes.textField}
-                  InputLabelProps={{
-                    shrink: true,
-                  }}
-                />
-              </div>
-              <div className="submit-button">
-                <Button
-                  variant="contained"
-                  style={{
-                    width: "200px",
-                    height: "50px",
-                    color: "black",
-                    backgroundColor: "#FFB91D",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Submit
-                </Button>
+            <div className="form-sections-inner">
+              <div className="section-separator mt-5"></div>
+              <div className="moving-date-div">
+                <span className="section-heading">Moving date</span>
+                <div className="field-and-button-container">
+                  <div className={classes.item}>
+                    <TextField
+                      id="date"
+                      label="Moving Date From"
+                      type="date"
+                      defaultValue="2022-01-28"
+                      style={{ width: "36vh" }}
+                      variant="outlined"
+                      size="small"
+                      // className={classes.textField}
+                      InputLabelProps={{
+                        shrink: true,
+                      }}
+                    />
+                  </div>
+                  <div className={classes.item}>
+                    <TextField
+                      id="date"
+                      label="Moving Date To"
+                      type="date"
+                      defaultValue="2022-01-28"
+                      style={{ width: "36vh" }}
+                      variant="outlined"
+                      size="small"
+                      // className={classes.textField}
+                      InputLabelProps={{
+                        shrink: true,
+                      }}
+                    />
+                  </div>
+                  <div className="submit-button">
+                    <Button
+                      variant="contained"
+                      style={{
+                        width: "200px",
+                        height: "50px",
+                        color: "black",
+                        backgroundColor: "#FFB91D",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      Submit
+                    </Button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -1,140 +1,68 @@
-.divcontainer {
-  display: flex;
-  flex-direction: column;
-  /* margin-top: 40px; */
-  justify-content: center;
-  align-items: center;
-  /* height: 20px; */
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.596);
-}
-.buttonContainer {
-  display: flex;
-  /* margin-top: 70px; */
-  margin-bottom: 20px;
-}
-
-.buttonContainerSingle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 16px;
-  font-weight: bold;
-  color: black;
-  text-underline-offset: 10px;
-  margin-left: 50px;
-}
-
-.queue-div-heading-container {
-  display: flex;
-  /* flex-direction: column; */
-  /* padding-bottom: 20px; */
-  justify-content: center;
-  align-items: center;
-}
-.queue-div-heading {
-  font-size: 30px;
-  color: #000000;
-  font-weight: bold;
-  /* margin-bottom: 40px; */
-  padding-bottom: 40px;
-  padding-top: 20px;
-  margin-left: 70px;
-}
-
-.custom-btn {
-  width: 200px;
-  height: 40px;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px 25px;
-  /* margin-right: 40px; */
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-    7px 7px 20px 0px rgba(0, 0, 0, 0.678), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-  outline: none;
-}
-
-/* 5 */
-.btn-5 {
-  margin-left: 20px;
-  margin-top: 40px;
-  width: 200px;
-  height: 50px;
-  line-height: 42px;
-  padding: 0;
-  border: none;
-  background: rgb(0, 186, 240);
-  background: linear-gradient(
-    90deg,
-    rgba(0, 186, 240, 1) 0%,
-    rgba(182, 224, 3, 0.3085609243697479) 0%,
-    rgba(12, 149, 168, 1) 100%
-  );
-  color: black;
-  font-size: 20px;
-}
-.btn-5:hover {
-  color: #172500;
-  background: transparent;
-  box-shadow: none;
-  font-weight: 800;
-}
-.btn-5:before,
-.btn-5:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 2px;
-  width: 0;
-  background: #fde400;
-  box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003,
-    4px 4px 5px 0px #0002;
-  transition: 400ms ease all;
-}
-.btn-5:after {
-  right: inherit;
-  top: inherit;
-  left: 0;
-  bottom: 0;
-}
-.btn-5:hover:before,
-.btn-5:hover:after {
+.quick-response-div {
   width: 100%;
-  transition: 800ms ease all;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  padding: 10px;
+  justify-content: center;
 }
 
-/* @-webkit-keyframes shiny-btn1 {
-  0% {
-    -webkit-transform: scale(0) rotate(45deg);
-    opacity: 0;
-  }
-  80% {
-    -webkit-transform: scale(0) rotate(45deg);
-    opacity: 0.5;
-  }
-  81% {
-    -webkit-transform: scale(4) rotate(45deg);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(50) rotate(45deg);
-    opacity: 0;
-  }
-} */
+.quick-response-fancy-card-div {
+  display: flex;
+  align-items: center;
+}
 
-@media screen and (max-width: 768px) {
+.quick-response-fancy-card-each {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+.fancy-card-icon-each {
+  font-size: 60px !important;
+  margin: 30px;
+}
+
+/* for mobile device */
+@media screen and (max-width: 767px) {
   .buttonContainer {
     flex-direction: column;
   }
+  .queue-div-heading {
+    margin: auto;
+  }
+  .buttonContainerSingle {
+    margin: auto;
+  }
   .buttonContainerSingle .custom-btn {
     margin: 10px 0px 50px;
-    
+  }
+}
+/* for tabs, mini laptop/monitor */
+
+/* @media only screen and (max-width: 1300px) and (min-width: 768px) {
+  .buttonContainerSingle {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+} */
+
+@media (max-width: 767px) {
+  .quick-response-fancy-card-div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* for tabs, mini laptop/monitor */
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  .quick-response-fancy-card-each {
+    margin: auto;
   }
 }

@@ -40,13 +40,55 @@
   width: 200px;
   height: 200px;
   border-radius: 10px;
-  background-color: #ffae00 !important;
+  /* background-color: #ffae00 !important; */
   /* color: rgb(255, 255, 255) !important; */
   font-size: 20px !important;
   font-weight: bold !important;
   cursor: pointer;
   border-radius: 50% !important;
   margin-top: 20px !important;
+}
+/* 5 */
+.btn-5 {
+  margin: 40px 10px 0px 10px;
+  width: 200px;
+  height: 50px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  background: #facc2e;
+  color: black;
+  font-size: 20px;
+}
+.btn-5:hover {
+  color: #172500;
+  background: transparent;
+  box-shadow: none;
+  font-weight: 800;
+}
+.btn-5:before,
+.btn-5:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #fde400;
+  box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003,
+    4px 4px 5px 0px #0002;
+  transition: 400ms ease all;
+}
+.btn-5:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+.btn-5:hover:before,
+.btn-5:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
 }
 
 .custom-button-each:hover {

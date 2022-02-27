@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./PropertyDescription.css";
 import KingBedIcon from "@material-ui/icons/KingBed";
 import BathtubIcon from "@material-ui/icons/Bathtub";
-import { Button, makeStyles } from "@material-ui/core";
+import { useForm } from "react-hook-form";
+import {
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  makeStyles,
+} from "@material-ui/core";
 import CallIcon from "@material-ui/icons/Call";
+import { Link } from "react-router-dom";
+import ArrangeViewCarosel from "../ArrangeViewCarosel/ArrangeViewCarosel";
 
 const useStyles = makeStyles((theme) => ({
   eachBtn: {
@@ -11,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     // borderColor: "red",
     width: "150px",
     color: "white",
+    marginBottom: "10px",
     // fontWeight: "bold",
     // borderColor: "lightgreen",
     // borderRadius: "10px",
@@ -28,6 +40,25 @@ const useStyles = makeStyles((theme) => ({
 
 const PropertyDescription = () => {
   const classes = useStyles();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
+    handleClose();
+    alert("Your viewing time has been set");
+  };
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <div className="description-container">
       <div className="property-desc-title">
@@ -53,10 +84,83 @@ const PropertyDescription = () => {
       <div className="property-desc-container-button">
         <Button className={classes.eachBtn}>Virtual Tour</Button>
       </div>
+      <div className="property-desc-container-button">
+        <Button className={classes.eachBtn} onClick={handleOpen}>
+          Arrange Viewing
+        </Button>
+      </div>
       <div className="property-desc-container-contact">
         <CallIcon className="desc-property-contact-icon" />
         <span>Contact us on: 123456789</span>
       </div>
+
+      {/* Modal Start */}
+
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          {"Select your best time and date for viewing the property"}
+        </DialogTitle>
+        <DialogContent
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {/* <DialogContentText id="alert-dialog-description">
+            If you are new to City Lord and would like a property valuation,
+            please complete the form and a member of our staff team will contact
+            you. <Link to="/free-valuation">Please click here</Link>
+          </DialogContentText> */}
+          {/* <ArrangeViewCarosel /> */}
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <input
+                type="datetime-local"
+                // placeholder="Datetime"
+                {...register("datetime", {})}
+                style={{
+                  marginBottom: "20px",
+                  height: "50px",
+                  padding: "10px",
+                  borderRadius: "10px",
+                  border: "2px solid green",
+                }}
+              />
+              <input
+                style={{
+                  width: "100px",
+                  background: "lightgreen",
+                  fontWeight: "bold",
+                  padding: "10px",
+                  borderRadius: "10px",
+                  border: "none",
+                }}
+                type="submit"
+              />
+            </div>
+          </form>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Close</Button>
+          {/* <Button onClick={handleClose} autoFocus>
+            Agree
+          </Button> */}
+        </DialogActions>
+      </Dialog>
+
+      {/* Modal End */}
     </div>
   );
 };

@@ -41,6 +41,11 @@
   margin-top: 10px;
   margin-bottom: 20px;
 }
+.radio-btn-wraper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .MuiRadio-colorSecondary.Mui-checked {
   color: rgb(0, 105, 5) !important;

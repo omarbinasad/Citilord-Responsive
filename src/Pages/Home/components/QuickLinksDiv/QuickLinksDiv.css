@@ -41,7 +41,7 @@
   width: 200px;
   height: 200px;
   border-radius: 10px;
-  background-color: #ffee00 !important;
+  background-color: #facc2e !important;
   /* color: rgb(255, 255, 255) !important; */
   font-size: 20px !important;
   font-weight: bold !important;
@@ -56,7 +56,7 @@
   color: rgb(0, 0, 0) !important;
   font-size: 20px;
   font-weight: bold;
-  border: 5px solid rgb(21, 107, 0);
+  /* border: 5px solid rgb(21, 107, 0); */
 }
 
 .button-icon-quick-links-div {
@@ -75,8 +75,35 @@ p {
   font-weight: bold;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .button-and-title-conatiner {
     flex-direction: column;
   }
+} */
+@media screen and (max-width: 767px) {
+  .button-and-title-conatiner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 768px) {
+  .button-and-title-container-each {
+    padding: 0px !important;
+    /* margin: 0px !important; */
+  }
+  .button-and-title-container-each h4 {
+    font-size: 15px;
+  }
+  .custom-button-each {
+    width: 150px !important;
+    height: 150px !important;
+  }
+  .custom-button-each:nth-child(2) {
+    margin-top: 6px !important;
+  }
+}
+.MuiTabPanel-root {
+  width: 100%;
+  padding: 20px 0px 20px 0px !important;
 }

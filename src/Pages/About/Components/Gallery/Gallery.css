@@ -46,8 +46,9 @@
   transform: scale(1.15);
 }
 .view-more-btn {
+  text-transform: capitalize !important;
   text-decoration: none !important;
-  background-color: #dfab00;
+  background-color: #facc2e;
   border-radius: 3px;
 }
 

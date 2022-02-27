@@ -200,7 +200,7 @@ const Banner = () => {
             <Link to={"/free-valuation"} style={{ textDecoration: "none" }}>
               <BannerButton
                 variant="contained"
-                style={{ background: "green", fontWeight: "bold" }}
+                style={{ background: "#03A404", fontWeight: "bold" }}
               >
                 Free Valuation
               </BannerButton>
@@ -208,7 +208,11 @@ const Banner = () => {
             <Link to={"/quick-response"} style={{ textDecoration: "none" }}>
               <BannerButton
                 variant="contained"
-                style={{ color: "black", fontWeight: "bold" }}
+                style={{
+                  color: "black",
+                  background: "#FACC2E",
+                  fontWeight: "bold",
+                }}
               >
                 Quick-response
               </BannerButton>

@@ -31,7 +31,7 @@
   margin-right: 30px;
 }
 .navbar-brand > img {
-  width: 200px;
+  width: 150px;
 }
 .dropdown-menu {
   background-color: rgba(19, 19, 19, 0.651);
@@ -65,7 +65,7 @@
   background-color: rgba(0, 0, 0, 0) !important;
 }
 .my-citi-lord-btn {
-  background-color: rgb(223, 171, 0);
+  background-color: #facc2e;
   color: rgb(49, 49, 49);
   font-weight: 700;
 }
@@ -82,4 +82,17 @@
 .drawer-icon {
   margin-right: 10px;
   margin-bottom: 10px;
+}
+/* for tablets, mini laptop/monitors  */
+@media only screen and (max-width: 1300px) and (min-width: 768px) {
+  .custom-nav-bar ul li a {
+    font-size: 1rem;
+  }
+  .my-citi-lord-btn {
+    padding: 4px;
+    font-size: 0.7rem;
+  }
+  .custom-nav-bar ul li {
+    margin-right: 15px;
+  }
 }

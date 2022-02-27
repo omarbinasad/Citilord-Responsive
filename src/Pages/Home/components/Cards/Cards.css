@@ -1,6 +1,5 @@
 /* https://youtu.be/A_8DSKGWWYI */
-/* 
-@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400&display=swap");
 /* * {
   margin: 0;
   padding: 0;
@@ -24,7 +23,7 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
     rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
   transition: all 0.6s ease;
-  margin-right: 15px;
+  /* margin-right: 15px; */
   border-left: 1px solid #ffac1c;
   border-right: 1px solid #ffac1c;
 }
@@ -140,4 +139,24 @@
 
 .MuiFilledInput-underline:after {
   border-bottom-color: #1f8300 !important;
+}
+.MuiBadge-root {
+  margin: 10px !important;
+}
+/* Media Queries start */
+/* for mobile device */
+@media screen and (max-width: 767px) {
+  .card {
+    margin: 0px 0px 20px 0px !important;
+  }
+  .badge-root-main {
+    margin: 0px !important;
+  }
+}
+/* for tabs, mini laptop/monitor */
+@media only screen and (max-width: 1300px) and (min-width: 768px) {
+  .card {
+    width: 240px !important;
+    margin: 0px 0px 20px 0px !important;
+  }
 }

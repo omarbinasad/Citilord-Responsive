@@ -9,15 +9,15 @@ import LandlordTanents from "../LandlordTanents/LandlordTanents";
 
 const Contact = () => {
   return (
-    <div className="pb-3">
+    <div className="pb-5">
       <ContactBanner></ContactBanner>
       <div className="container py-4">
         <TimeTable></TimeTable>
-        {/* <EnquiriesReference></EnquiriesReference> */}
         <ContactForm></ContactForm>
         {/* <Map></Map> */}
       </div>
       {/* <LandlordTanents></LandlordTanents> */}
+      {/* <EnquiriesReference></EnquiriesReference> */}
     </div>
   );
 };

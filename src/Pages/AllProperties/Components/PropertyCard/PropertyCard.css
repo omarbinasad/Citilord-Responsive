@@ -1,18 +1,22 @@
 .property-card {
-  width: 90%;
+  width: 50%;
   max-width: 98rem;
-  padding: 2.6rem;
+  padding: 1.5rem;
   background-color: #fff;
   box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   border-radius: 0.8rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .property-card-img {
-  min-width: 35rem;
-  max-width: 35rem;
-  height: 30rem;
-  transform: translateX(-8rem);
+  min-width: 20rem;
+  max-width: 20rem;
+  height: 20rem;
+  transform: translateX(-4rem);
   position: relative;
 }
 
@@ -36,38 +40,52 @@
 .property-card-date span {
   display: block;
   color: rgba(0, 0, 0, 0.5);
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 600;
   margin: 0.5rem 0;
 }
 .property-card-title {
-  font-size: 2.5rem;
-  margin: 1.5rem 0 2rem;
+  font-size: 1rem;
+  margin: 1rem 0 1rem;
   text-transform: uppercase;
   color: #4facfe;
 }
 .property-card-desc {
-  margin-bottom: 3rem;
-  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem !important;
   color: rgba(0, 0, 0, 7);
+  text-align: justify;
 }
 
 .property-card-btn {
   display: inline-block;
-  padding: 1rem 1.6rem;
+  padding: 0.6rem 1rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   color: #fff;
   background: linear-gradient(to right, #20551b, #57ee84);
   border-radius: 0.4rem;
   text-decoration: none;
   transition: 0.5s;
   background-position: 0px;
+  margin-left: 3rem;
 }
 .property-card-btn:hover {
   color: #fff;
   transform: scale(1.1);
+}
+
+/* Icon Css from another file: */
+.card-icon-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-icon-container-bed {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 /* media queries */
@@ -79,6 +97,9 @@
     min-width: 30rem;
     max-width: 30rem;
   }
+  /* .property-card-btn {
+    margin-left: 400px;
+  } */
 }
 @media screen and (max-width: 868px) {
   .property-card {
@@ -87,12 +108,21 @@
 }
 @media screen and (max-width: 768px) {
   .property-card {
-    padding: 2.5rem;
+    padding: 1.5rem;
     flex-direction: column;
+    width: 80%;
+    margin-right: 0;
   }
   .property-card-img {
     min-width: 100%;
     max-width: 100%;
-    transform: translate(0, -8rem);
+    height: 250px;
+    transform: translate(0, -1rem);
   }
+  .property-card-btn {
+    margin-left: 70px;
+  }
+  /* .property-card-img img {
+    height: 80%;
+  } */
 }

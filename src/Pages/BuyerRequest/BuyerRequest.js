@@ -82,7 +82,7 @@ const BuyerRequest = () => {
         <div className="form-heading">
           <h3> Buyer Request</h3>
         </div>
-        <form>
+        <form className="buyer-req-form">
           {/* personal information start */}
           <span className={classes.subHeading}>Personal Information</span>
           <div className="personal-info-fields-colunm">

@@ -30,7 +30,7 @@ const Search = () => {
                   size="large"
                   className="search-input-button"
                   style={{
-                    backgroundColor: "#FFAE00",
+                    backgroundColor: "#FACC2E",
                     color: "black",
                     width: "150px",
                   }}
@@ -45,7 +45,7 @@ const Search = () => {
                   size="large"
                   className="search-input-button"
                   style={{
-                    backgroundColor: "#5DB84C",
+                    backgroundColor: "#03A404",
                     color: "black",
                     width: "150px",
                   }}

@@ -6,22 +6,26 @@
   box-shadow: -1px 2px 10px gray;
   justify-content: center;
   margin: 30px;
-  height: 500px;
+  /* height: 500px; */
   /* width: 1000px; */
   border-radius: 10px;
 }
 
 .section-separator {
-  height: 280px !important;
+  height: 285px !important;
   width: 2px;
-  background-color: rgb(230, 187, 0);
+  background-color: #facc2e;
   margin-left: 25px;
 }
 
 .form-sections-1st-2 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+.form-sections-inner {
+  display: flex;
 }
 .personal-details-div {
   /* width: 100%; */
@@ -33,6 +37,7 @@
 
 .form-sections {
   display: flex;
+
   justify-content: center;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -47,6 +52,7 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 25px;
 }
 
 .section-heading {
@@ -62,4 +68,9 @@
   font-weight: bold;
   text-decoration: underline;
   text-underline-offset: 10px;
+}
+
+/* MEDIA QUERIES  */
+/* for mobile */
+@media screen and (max-width: 767px) {
 }

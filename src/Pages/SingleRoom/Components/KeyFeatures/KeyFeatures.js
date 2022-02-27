@@ -7,16 +7,16 @@ const KeyFeatures = () => {
         <div className="key-features-title-div">Key Features</div>
         <div className="key-features-descr-div">
           <ul>
-            <li>Large Living Room</li>
-            <li>Large Kitchen</li>
-            <li>Gas Central Heating </li>
-            <li>Double Glazing </li>
-            <li>Laminated Flooring </li>
+            <li>Feature-01</li>
+            <li>Feature-02</li>
+            <li>Feature-03</li>
+            <li>Feature-04</li>
+            <li>Feature-05</li>
           </ul>
         </div>
       </div>
       <div className="key-features-right-div">
-        <div className="key-features-title-div">Property Description</div>
+        <div className="key-features-title-div">Room Description</div>
       </div>
       <div className="key-features-right-div">
         <div className="key-features-title-div">Summary</div>
