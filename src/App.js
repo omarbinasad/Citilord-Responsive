@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import Home from "./Pages/Home/Page/Home";
 import NavBar from "./Shared_components/Shared/NavBar/NavBar";
@@ -29,7 +29,14 @@ import LongLetPage from "./Pages/AllProperties/Components/LongLetPage/LongLetPag
 import SellPage from "./Pages/AllProperties/Components/SellPage/SellPage";
 import SingleRoom from "./Pages/SingleRoom/Page/SingleRoom";
 import AllRooms from "./Pages/AllRooms/AllRooms";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const App = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
   return (
     <Router>
       <ScrollToTop />

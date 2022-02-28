@@ -43,7 +43,7 @@ const NavBar = () => {
   );
 
   return (
-    <div className="custom-nav-container">
+    <div data-aos="fade-down" className="custom-nav-container">
       <nav className="navbar navbar-expand-lg navbar-dark custom-nav-bar px-3">
         <div className="container-fluid">
           <a className="navbar-brand me-auto" href="/">

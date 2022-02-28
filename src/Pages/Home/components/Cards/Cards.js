@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 const Cards = (props) => {
   return (
     <Badge
+      data-aos="fade-up"
       badgeContent={props.name}
       anchorOrigin={{
         vertical: "top",
@@ -56,7 +57,6 @@ const Cards = (props) => {
             </div>
           </div>
           {/* bottom icon container end */}
-
           <a>
             <Link to="/single-property">
               <button>View More</button>

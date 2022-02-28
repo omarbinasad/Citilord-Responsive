@@ -82,6 +82,7 @@ const CardTab = (props) => {
       {/* Card Tab End*/}
       {/* View All Property Button Start */}
       <div
+        data-aos="zoom-in"
         className="cards-view-all-btns-div"
         //  style={{ display: "flex" }}
       >
@@ -102,6 +103,7 @@ const CardTab = (props) => {
         </Link>
         <Link to="/all-properties/longlet" style={{ textDecoration: "none" }}>
           <Button
+
           // style={{
           //   width: "250px",
           //   height: "50px",

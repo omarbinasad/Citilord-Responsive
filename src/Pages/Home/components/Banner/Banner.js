@@ -190,7 +190,10 @@ const Banner = () => {
 
   return (
     <div>
-      <div className="banner-wrapper-main d-flex align-items-center justify-content-center">
+      <div
+        data-aos="zoom-in"
+        className="banner-wrapper-main d-flex align-items-center justify-content-center"
+      >
         <div className="welcome-and-icons-container">
           <div className="slider-content text-white">
             {/* <h1 style={{ fontSize: "70px" }}>Welcome to Citi Lord</h1> */}

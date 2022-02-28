@@ -11,7 +11,7 @@ const queueDiv = (props) => {
     <div className="quick-response-div">
       <h3>Get A Quick Response</h3>
       <div className="quick-response-fancy-card-div">
-        <div className="quick-response-fancy-card-each">
+        <div data-aos="fade-right" className="quick-response-fancy-card-each">
           <QuickResponseCard
             title="Get Call First"
             buttonName="Buyer"
@@ -19,7 +19,7 @@ const queueDiv = (props) => {
             buttonLink="/buyer-request"
           />
         </div>
-        <div className="quick-response-fancy-card-each">
+        <div data-aos="zoom-in" className="quick-response-fancy-card-each">
           <QuickResponseCard
             title="Get Email Alerts"
             buttonName="Renter Landlord"
@@ -27,7 +27,7 @@ const queueDiv = (props) => {
             buttonLink="/landlord-renter"
           />
         </div>
-        <div className="quick-response-fancy-card-each">
+        <div data-aos="fade-left" className="quick-response-fancy-card-each">
           <QuickResponseCard
             title="Get Price Reductions"
             buttonName="Seller Landlord"
