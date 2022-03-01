@@ -14,45 +14,41 @@ const Footer = () => {
             <div className="row footer-nav">
               <ul className="d-flex justify-content-between list-unstyled">
                 <li>
-                  <a href="#home">Home</a>
+                  <a href="/">Home</a>
                 </li>
                 <li>
-                  <a href="#about">Sell</a>
+                  <a href="#Sell">Sell</a>
                 </li>
                 <li>
-                  <a href="#about">Long Let</a>
+                  <a href="#Long Let">Long Let</a>
                 </li>
                 <li>
-                  <a href="#about">Short Let</a>
+                  <a href="#Short Let">Short Let</a>
                 </li>
                 <li>
                   <a href="#p">Property Share</a>
                 </li>
                 <li>
-                  <a href="#services">Landlord</a>
+                  <a href="#Landlord">Landlord</a>
                 </li>
                 <li>
                   <a href="#tenants">Tenants</a>
                 </li>
                 <li>
-                  <a href="#aboutt">About</a>
+                  <a href="/about">About</a>
                 </li>
 
                 <li>
                   <a href="#e">Report Repair</a>
                 </li>
                 <li>
-                  <a href="https://www.gov.uk/find-energy-certificate">
-                    EPC Check
-                  </a>
+                  <a href="">EPC Check</a>
                 </li>
                 <li>
-                  <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/942503/6.6642_MHCLG_How_to_Rent_v5.pdf">
-                    How to Rent Guide
-                  </a>
+                  <a href="">How to Rent Guide</a>
                 </li>
                 <li>
-                  <a href="#l">Complaints Procedure</a>
+                  <a href="#Complaints Procedure">Complaints Procedure</a>
                 </li>
               </ul>
             </div>
