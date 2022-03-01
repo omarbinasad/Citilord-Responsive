@@ -3,7 +3,7 @@ import "./SingleTeamMember.css";
 
 const SingleTeamMember = () => {
   return (
-    <div className="col-lg-3 col-md-6 col-sm-6">
+    <div data-aos="zoom-in" className="col-lg-3 col-md-6 col-sm-6">
       <div className="our-team">
         <div className="pic">
           <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" />

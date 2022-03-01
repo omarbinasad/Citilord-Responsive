@@ -6,9 +6,15 @@ import "./ForSaleSearch.css";
 const ForSaleSearch = () => {
   return (
     <div className="sale-form-container">
-      <div className="sale-form">
+      <div data-aos="zoom-in" className="sale-form">
         <div className="form-heading">
-          <h3>Property for sale</h3>
+          <h3
+            data-aos="fade-down"
+            data-aos-delay="1500"
+            data-aos-duration="1000"
+          >
+            Property for sale
+          </h3>
         </div>
         <form>
           <div className="price-input-container">

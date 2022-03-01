@@ -6,7 +6,7 @@ import Map from "../Map/Map";
 const TimeTable = () => {
   return (
     <div className="timtable-container-main">
-      <p className="">
+      <p data-aos="fade-in" className="">
         If you are a tenant looking for a rental property, or a landlord wanting
         to rent your property in Mile End, Tower Hamlets, East, North, North
         East and South East London, please don’t hesitate to get in touch. We
@@ -22,7 +22,10 @@ const TimeTable = () => {
           <Map></Map>
         </div> */}
         {/* table  */}
-        <div className="contact-text-inner-div col-lg-4 px-3 pb-3">
+        <div
+          data-aos="fade-right"
+          className="contact-text-inner-div col-lg-4 px-3 pb-3"
+        >
           <h3 className="">Office Opening & Closing Time</h3>
           <table class="table-fill">
             <thead>
@@ -64,11 +67,17 @@ const TimeTable = () => {
           </table>
         </div>
         {/* map  */}
-        <div className="contact-text-inner-div col-lg-4 mx-3 p-2">
+        <div
+          data-aos="zoom-in"
+          className="contact-text-inner-div col-lg-4 mx-3 p-2"
+        >
           <Map></Map>
         </div>
         {/*-  contact Right Container-*/}
-        <div className="contact-text-inner-div col-lg-4 p-3">
+        <div
+          data-aos="fade-left"
+          className="contact-text-inner-div col-lg-4 p-3"
+        >
           <div className="direct-contact-container">
             <ul className="contact-list">
               <li className="list-item">
@@ -324,7 +333,10 @@ const TimeTable = () => {
           <h3 className="">Holiday Message</h3>
           <p></p>
         </div> */}
-        <div className="contact-text-inner-div col-lg-3 px-3 me-1 ">
+        <div
+          data-aos="zoom-in"
+          className="contact-text-inner-div col-lg-3 px-3 me-1 "
+        >
           <h3 className="text-center">Repair and Maintenance</h3>
           <p>
             Citi Lord property management is separate from lettings office.For
@@ -334,7 +346,10 @@ const TimeTable = () => {
             repairs system.
           </p>
         </div>
-        <div className="contact-text-inner-div col-lg-3 mx-2 px-3">
+        <div
+          data-aos="zoom-in"
+          className="contact-text-inner-div col-lg-3 mx-2 px-3"
+        >
           <h3 className="text-center">Official Enquiries</h3>
           <p>
             Please note that citi lord ltd do not keep any existing tenants
@@ -343,7 +358,10 @@ const TimeTable = () => {
             tenants, please contact us
           </p>
         </div>
-        <div className="contact-text-inner-div col-lg-3 ms-1 me-2 px-3">
+        <div
+          data-aos="zoom-in"
+          className="contact-text-inner-div col-lg-3 ms-1 me-2 px-3"
+        >
           <h3 className="text-center">Tenant's Reference</h3>
           <p>
             If you require any references for any of our existing tenants,
@@ -354,7 +372,10 @@ const TimeTable = () => {
           </p>
         </div>
 
-        <div className="contact-text-inner-div col-lg-3 px-3 ms-1">
+        <div
+          data-aos="zoom-in"
+          className="contact-text-inner-div col-lg-3 px-3 ms-1"
+        >
           <h3 className="text-center">Holiday Message</h3>
           <p></p>
         </div>

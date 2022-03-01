@@ -74,7 +74,10 @@ const ContactForm = () => {
 
         <div className="contact-wrapper">
           {/* <!-- Left contact page -->  */}
-          <div className="contact-text-inner-div contact-form-div col-lg-4 p-3">
+          <div
+            data-aos="fade-right"
+            className="contact-text-inner-div contact-form-div col-lg-4 p-3"
+          >
             <form id="contact-form" className="form-horizontal" role="form">
               <div className="form-group">
                 <div className="col-sm-12">
@@ -137,7 +140,10 @@ const ContactForm = () => {
             </form>
           </div>
 
-          <div className="contact-text-inner-div contact-text-inner-landlord d-flex justify-content-center align-items-center col-lg-4 mx-3">
+          <div
+            data-aos="zoom-in"
+            className="contact-text-inner-div contact-text-inner-landlord d-flex justify-content-center align-items-center col-lg-4 mx-3"
+          >
             <div className="landlord-section">
               <div>
                 <h3 className="landlord-section-title">Landlord</h3>
@@ -177,7 +183,10 @@ const ContactForm = () => {
               </div>
             </div>
           </div>
-          <div className="contact-text-inner-div contact-text-inner-tanents col-lg-4 d-flex justify-content-center align-items-center ">
+          <div
+            data-aos="fade-left"
+            className="contact-text-inner-div contact-text-inner-tanents col-lg-4 d-flex justify-content-center align-items-center "
+          >
             <div className="tenants-section">
               <div>
                 <h3 className="tanents-section-title">Tanents</h3>

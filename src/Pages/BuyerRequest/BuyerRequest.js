@@ -77,10 +77,16 @@ const BuyerRequest = () => {
     console.log(inputFields);
   };
   return (
-    <div className="form-page">
+    <div data-aos="zoom-in" className="form-page">
       <div className="form-container">
         <div className="form-heading">
-          <h3> Buyer Request</h3>
+          <h3
+            data-aos="fade-down"
+            data-aos-delay="1500"
+            data-aos-duration="1000"
+          >
+            Buyer Request
+          </h3>
         </div>
         <form className="buyer-req-form">
           {/* personal information start */}

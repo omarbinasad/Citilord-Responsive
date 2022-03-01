@@ -14,10 +14,11 @@ const AboutUs = () => {
       </h1>
       <div className="about-section-container">
         <img
+          data-aos="zoom-in"
           src="https://cdn.pixabay.com/photo/2018/01/28/10/08/purchase-3113198_960_720.jpg"
           alt="about-img"
         />
-        <p>
+        <p data-aos="fade-up">
           Combining expertise, knowledge of the London rental market and modern
           marketing, Citi Lord offers both landlords and tenants the best value
           and service in lettings and property management. Covering property in
@@ -30,7 +31,7 @@ const AboutUs = () => {
           appointment basis), allowing us to respond to any our clients’ needs
           promptly and effectively.
         </p>
-        <p>
+        <p data-aos="fade-up">
           Citi Lord’s success has been built upon the single-minded desire and
           determination of our staff to provide clients, with exceptional,
           dedicated and personalised service, a commitment evidenced by our
@@ -39,7 +40,7 @@ const AboutUs = () => {
           at any time without an appointment. We always have friendly and
           professional staff on hand to deal directly with any questions or
           queries you may have.{" "}
-          <p class="collapse" id="collapseExample">
+          <p data-aos="fade-in" className="collapse" id="collapseExample">
             With a good knowledge of letting market and our modern technology we
             use daily basis which help us to offers a new experience to let and
             manage property in London and Essex. From the beginning of the
@@ -77,9 +78,10 @@ const AboutUs = () => {
             satisfaction. We believe we bring you’re the way you think and which
             is one of the most important
           </p>
-        </p>{" "}
+        </p>
         <button
-          class="btn btn-default read-more-btn"
+          data-aos="zoom-in"
+          className="btn btn-default read-more-btn"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#collapseExample"

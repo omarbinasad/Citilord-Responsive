@@ -9,6 +9,7 @@ const Photos = () => {
           <li className="image-thumbnail">
             <a href="#lightbox_1">
               <img
+                data-aos="zoom-in"
                 src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&h=500&fit=crop"
                 alt="Summer Season"
                 className="image"
@@ -18,6 +19,7 @@ const Photos = () => {
           <li className="image-thumbnail">
             <a href="#lightbox_2">
               <img
+                data-aos="zoom-in"
                 src="https://images.unsplash.com/photo-1515260268569-9271009adfdb?w=500&h=500&fit=crop"
                 alt="Summer Season"
                 className="image"
@@ -27,6 +29,7 @@ const Photos = () => {
           <li className="image-thumbnail">
             <a href="#lightbox_3">
               <img
+                data-aos="zoom-in"
                 src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=500&h=500&fit=crop"
                 alt="Summer Season"
                 className="image"
@@ -36,6 +39,7 @@ const Photos = () => {
           <li className="image-thumbnail">
             <a href="#lightbox_1">
               <img
+                data-aos="zoom-in"
                 src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&h=500&fit=crop"
                 alt="Summer Season"
                 className="image"
@@ -45,6 +49,7 @@ const Photos = () => {
           <li className="image-thumbnail">
             <a href="#lightbox_2">
               <img
+                data-aos="zoom-in"
                 src="https://images.unsplash.com/photo-1515260268569-9271009adfdb?w=500&h=500&fit=crop"
                 alt="Summer Season"
                 className="image"
@@ -54,6 +59,7 @@ const Photos = () => {
           <li className="image-thumbnail">
             <a href="#lightbox_3">
               <img
+                data-aos="zoom-in"
                 src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=500&h=500&fit=crop"
                 alt="Summer Season"
                 className="image"
@@ -64,7 +70,6 @@ const Photos = () => {
       </div>{" "}
       {/* <!-- Lightbox 01 --> */}
       <div className="light-box" id="lightbox_1">
-        {" "}
         <span className="close-btn">
           <a href="#">
             <i class="fas fa-times"></i>
@@ -82,20 +87,17 @@ const Photos = () => {
         </div>
         <span className="next-btn">
           <a href="#lightbox_2">
-            {" "}
             <i class="fas fa-chevron-right"></i>
           </a>
         </span>
         <span className="previous-btn">
           <a href="#lightbox_6">
-            {" "}
             <i class="fas fa-chevron-left"></i>
           </a>
         </span>
       </div>
       {/* <!-- Lightbox 02 --> */}
       <div className="light-box" id="lightbox_2">
-        {" "}
         <span className="close-btn">
           <a href="#">
             <i class="fas fa-times"></i>
@@ -123,7 +125,6 @@ const Photos = () => {
       </div>
       {/* <!-- Lightbox 03 --> */}
       <div className="light-box" id="lightbox_3">
-        {" "}
         <span className="close-btn">
           <a href="#">
             <i class="fas fa-times"></i>
@@ -140,13 +141,11 @@ const Photos = () => {
         </div>
         <span className="next-btn">
           <a href="#lightbox_4">
-            {" "}
             <i class="fas fa-chevron-right"></i>
           </a>
         </span>
         <span className="previous-btn">
           <a href="#lightbox_2">
-            {" "}
             <i class="fas fa-chevron-left"></i>
           </a>
         </span>

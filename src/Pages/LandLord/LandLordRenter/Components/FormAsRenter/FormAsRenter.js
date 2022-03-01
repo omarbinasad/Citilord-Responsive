@@ -123,10 +123,16 @@ const FormAsRenter = () => {
 
   return (
     <div className="landlord-renter-form-container">
-      <div className="form-main">
+      <div data-aos="zoom-in" className="form-main">
         <form className={classes.root} onSubmit={handleSubmit}>
           <div className="form-heading">
-            <h3>Renter Landlord</h3>
+            <h3
+              data-aos="fade-down"
+              data-aos-delay="1500"
+              data-aos-duration="1000"
+            >
+              Renter Landlord
+            </h3>
           </div>
 
           {/* personal information start */}

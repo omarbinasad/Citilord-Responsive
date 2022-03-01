@@ -4,7 +4,7 @@ import aboutBannerImg from "./aboutus.jpg";
 const AboutBanner = () => {
   return (
     <div>
-      <div class="about-banner">
+      <div data-aos="zoom-in" className="about-banner">
         <img src={aboutBannerImg} className="about-banner-img" alt="..." />
       </div>
     </div>

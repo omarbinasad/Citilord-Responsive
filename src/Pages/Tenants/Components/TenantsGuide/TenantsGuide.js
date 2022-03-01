@@ -6,17 +6,26 @@ const TenantsGuide = () => {
   return (
     <div>
       <div className="container">
-        <div className="bg-warning tenantsGuide-title-div">
+        <div data-aos="fade-up" className="bg-warning tenantsGuide-title-div">
           <h1 className="text-center">Services for Tenants</h1>
         </div>
-        <h4 style={{ marginBottom: "10px", marginTop: "10px" }}>
+        <h4
+          data-aos="fade-up"
+          style={{ marginBottom: "10px", marginTop: "10px" }}
+        >
           TENANT'S GUIDE
         </h4>
         <div className="tenantsGuide-container d-flex">
           <div className="tenantsGuide-img-div">
-            <img src={TenantsGuideImg} alt="" width="300" height="200" />
+            <img
+              data-aos="zoom-in"
+              src={TenantsGuideImg}
+              alt=""
+              width="300"
+              height="200"
+            />
           </div>
-          <div className="tenantsGuide-text-div">
+          <div data-aos="fade-up" className="tenantsGuide-text-div">
             <p>
               Tenants information and terms & conditions to rent a property from
               Citi Lord Ltd.

@@ -46,7 +46,15 @@ const NavBar = () => {
     <div data-aos="fade-down" className="custom-nav-container">
       <nav className="navbar navbar-expand-lg navbar-dark custom-nav-bar px-3">
         <div className="container-fluid">
-          <a className="navbar-brand me-auto" href="/">
+          <a
+            className="navbar-brand me-auto"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            data-aos-delay="1300"
+            data-aos-duration="1000"
+            href="/"
+          >
             <img className="" src={Logo} alt="" />
           </a>
           <button

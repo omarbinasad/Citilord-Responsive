@@ -204,6 +204,9 @@ const Banner = () => {
               <BannerButton
                 variant="contained"
                 style={{ background: "#03A404", fontWeight: "bold" }}
+                data-aos="fade-right"
+                data-aos-delay="1500"
+                data-aos-duration="1000"
               >
                 Free Valuation
               </BannerButton>
@@ -216,6 +219,9 @@ const Banner = () => {
                   background: "#FACC2E",
                   fontWeight: "bold",
                 }}
+                data-aos="fade-left"
+                data-aos-delay="1500"
+                data-aos-duration="1000"
               >
                 Quick-response
               </BannerButton>

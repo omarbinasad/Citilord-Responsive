@@ -42,7 +42,7 @@ const AccordionDiv = () => {
     <div className={classes.accordionContent}>
       <div className={classes.root}>
         {/* accordion start */}
-        <Accordion style={{ borderRadius: "10px" }}>
+        <Accordion data-aos="fade-up" style={{ borderRadius: "10px" }}>
           <AccordionSummary
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
@@ -66,7 +66,7 @@ const AccordionDiv = () => {
           </AccordionDetails>
         </Accordion>
 
-        <Accordion style={{ borderRadius: "10px" }}>
+        <Accordion data-aos="fade-up" style={{ borderRadius: "10px" }}>
           <AccordionSummary
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
@@ -87,7 +87,7 @@ const AccordionDiv = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion style={{ borderRadius: "10px" }}>
+        <Accordion data-aos="fade-up" style={{ borderRadius: "10px" }}>
           <AccordionSummary
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
@@ -108,7 +108,7 @@ const AccordionDiv = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion style={{ borderRadius: "10px" }}>
+        <Accordion data-aos="fade-up" style={{ borderRadius: "10px" }}>
           <AccordionSummary
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
@@ -131,7 +131,7 @@ const AccordionDiv = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion style={{ borderRadius: "10px" }}>
+        <Accordion data-aos="fade-up" style={{ borderRadius: "10px" }}>
           <AccordionSummary
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
@@ -154,7 +154,7 @@ const AccordionDiv = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion style={{ borderRadius: "10px" }}>
+        <Accordion data-aos="fade-up" style={{ borderRadius: "10px" }}>
           <AccordionSummary
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
