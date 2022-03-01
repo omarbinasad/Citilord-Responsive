@@ -4,7 +4,7 @@ import "./AllRooms.css";
 import RoomCard from "./RoomCard/RoomCard";
 const AllRooms = () => {
   return (
-    <div className="container all-properties-container">
+    <div className="container all-properties-container py-5">
       <h3>All Rooms</h3>
       <div className="proeprty-list-container">
         <RoomCard />

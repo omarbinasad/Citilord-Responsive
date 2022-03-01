@@ -6,11 +6,20 @@ import { KingBed } from "@material-ui/icons";
 
 const PropertyCard = () => {
   return (
-    <div className="property-card">
+    <div
+      data-aos="fade-left"
+      data-aos-duration="1000"
+      className="property-card"
+    >
       <div className="property-card-img">
         <img src={PropertyImg1} alt="" />
       </div>
-      <div className="property-card-info">
+      <div
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        data-aos-delay="1000"
+        className="property-card-info"
+      >
         <div className="property-card-date">
           <span>Sunday</span>
           <span>October 27 2222</span>

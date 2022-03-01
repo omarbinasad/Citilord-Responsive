@@ -4,7 +4,7 @@ import PropertyCard from "../PropertyCard/PropertyCard";
 import "./ShortLetPage.css";
 const ShortLetPage = () => {
   return (
-    <div className="container all-properties-container">
+    <div className="container all-properties-container py-5">
       <h3>All Short Let Properties</h3>
       <div className="proeprty-list-container">
         <PropertyCard />

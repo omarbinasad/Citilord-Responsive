@@ -16,7 +16,7 @@
   min-width: 20rem;
   max-width: 20rem;
   height: 20rem;
-  transform: translateX(-4rem);
+  transform: translateX(-4rem) !important;
   position: relative;
 }
 
