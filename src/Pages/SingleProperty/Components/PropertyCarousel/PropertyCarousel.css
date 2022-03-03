@@ -1,10 +1,9 @@
 .property-carousel-container {
   position: relative;
-  width: 950px;
+  /* width: 950px; */
   height: 500px;
-  margin-left: 20px;
-
-  margin-top: 20px;
+  /* margin-left: 20px;
+  margin-top: 20px; */
 }
 .property-carousel-inner img {
   height: 500px;
@@ -25,4 +24,10 @@
 }
 .property-carousel-prev-btn:hover {
   background-color: rgba(0, 0, 0, 0.363) !important;
+}
+@media screen and (max-width: 767px) {
+  .property-carousel-container {
+    width: 100%;
+    margin: 0;
+  }
 }

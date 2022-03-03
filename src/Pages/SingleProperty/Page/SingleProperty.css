@@ -6,6 +6,8 @@
 }
 
 .carosel-menutab-container {
+  width: 55%;
+  padding: 20px 0px 20px 20px;
   display: flex;
   justify-content: flex-start;
   /* align-items: center; */
@@ -15,3 +17,15 @@
 .carosel-menutab-description-container {
   display: flex;
 }
+
+/* MEDIA QUERIES  */
+/* for mobile */
+@media screen and (max-width: 767px) {
+  .carosel-menutab-description-container {
+    flex-direction: column;
+  }
+  .carosel-menutab-container {
+    width: 100%;
+  }
+}
+

@@ -4,3 +4,15 @@
   /* height: 100vh; */
   overflow: hidden;
 }
+
+/* MEDIA QUERIES  */
+/* for mobile */
+@media screen and (max-width: 767px) {
+  .carosel-menutab-description-container {
+    flex-direction: column;
+  }
+  .carosel-menutab-container {
+    width: 100%;
+  }
+}
+
