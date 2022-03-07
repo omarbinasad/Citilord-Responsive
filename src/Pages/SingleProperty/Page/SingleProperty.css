@@ -20,12 +20,18 @@
 
 /* MEDIA QUERIES  */
 /* for mobile */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 850px) {
   .carosel-menutab-description-container {
     flex-direction: column;
   }
   .carosel-menutab-container {
     width: 100%;
+    padding: 0;
   }
 }
-
+@media only screen and (max-width: 1300px) and (min-width: 851px) {
+  .carosel-menutab-container {
+    width: 65%;
+    margin: 0;
+  }
+}

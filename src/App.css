@@ -19,3 +19,7 @@ p {
 legend {
   float: none;
 }
+.form-control:focus {
+  box-shadow: none;
+  border-color: rgb(30, 173, 1);
+}

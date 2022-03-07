@@ -1,0 +1,28 @@
+.profile-button {
+  background: rgb(30, 173, 1);
+  box-shadow: none;
+  border: none;
+}
+
+.profile-button:hover {
+  background: rgb(16, 99, 0);
+}
+
+.profile-button:focus {
+  background: rgb(30, 173, 1);
+  box-shadow: none;
+}
+
+.profile-button:active {
+  background: rgb(30, 173, 1);
+  box-shadow: none;
+}
+
+.back:hover {
+  color: rgb(30, 173, 1);
+  cursor: pointer;
+}
+
+.labels {
+  font-size: 11px;
+}

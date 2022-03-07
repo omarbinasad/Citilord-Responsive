@@ -4,14 +4,14 @@ import "./PropertyTab.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
+    // display: "flex",
     // flexDirection: "column",
-    justifyContent: "center",
+    // justifyContent: "center",
     // marginLeft: theme.spacing(2.4),
   },
   btnGroup: {
     display: "flex",
-    flexWrap: "wrap",
+    // flexWrap: "wrap",
     justifyContent: "center",
     // backgroundColor: "lightgreen",
     // borderColor: "red",
@@ -20,8 +20,9 @@ const useStyles = makeStyles((theme) => ({
   },
   eachBtn: {
     backgroundColor: "black",
+    textTransform: "capitalize",
     // borderColor: "red",
-    // width: "120px",
+    width: "12.6%",
     height: "50px",
     color: "white",
     // fontWeight: "bold",
@@ -46,7 +47,7 @@ const PropertyTab = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <div>
+      <div className="p-tab-btns-div">
         <ButtonGroup className={classes.btnGroup}>
           <Button className={classes.eachBtn}>Property Details</Button>
           <Button className={classes.eachBtn}>Transport</Button>

@@ -15,6 +15,7 @@ import {
 import CallIcon from "@material-ui/icons/Call";
 import { Link } from "react-router-dom";
 import ArrangeViewCarosel from "../ArrangeViewCarosel/ArrangeViewCarosel";
+import ArrangeViewingForm from "../ArrangeViewingForm/ArrangeViewingForm";
 
 const useStyles = makeStyles((theme) => ({
   eachBtn: {
@@ -38,7 +39,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const PropertyDescription = () => {
+const PropertyDescription = (props) => {
+  const { firstname, lastname, email, value } = props;
   const classes = useStyles();
 
   const {
@@ -118,8 +120,8 @@ const PropertyDescription = () => {
             you. <Link to="/free-valuation">Please click here</Link>
           </DialogContentText> */}
           {/* <ArrangeViewCarosel /> */}
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div
+          {/* <form onSubmit={handleSubmit(onSubmit)}> */}
+          {/* <div
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -138,6 +140,7 @@ const PropertyDescription = () => {
                   border: "2px solid green",
                 }}
               />
+
               <input
                 style={{
                   width: "100px",
@@ -149,8 +152,9 @@ const PropertyDescription = () => {
                 }}
                 type="submit"
               />
-            </div>
-          </form>
+            </div> */}
+          <ArrangeViewingForm />
+          {/* </form> */}
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Close</Button>

@@ -4,6 +4,7 @@ import "./NavBar.css";
 import Logo from "./citilordLogo.png";
 import { NavLink } from "react-router-dom";
 import {
+  Avatar,
   Button,
   Dialog,
   DialogActions,
@@ -69,7 +70,7 @@ const NavBar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul className="custom-nav-ul align-items-center navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item ">
                 <NavLink
                   className={(navInfo) =>
@@ -153,10 +154,42 @@ const NavBar = () => {
                   Contact
                 </NavLink>
               </li>
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link custom-dropdown-link"
+                  href="/"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <Avatar
+                    className="nav-item dropdown"
+                    src="/broken-image.jpg"
+                  />
+                </a>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <NavLink className="dropdown-item" to="/user-profile">
+                      Profile
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink className="dropdown-item" to="#">
+                      Logout
+                    </NavLink>
+                  </li>
+                </ul>
+              </li>
             </ul>
-            <button className="my-citi-lord-btn btn btn-default" type="submit">
-              My Citi Lord
-            </button>
+            <NavLink className="" to="/user-login">
+              <button
+                className="my-citi-lord-btn btn btn-default me-3"
+                type="submit"
+              >
+                Login
+              </button>
+            </NavLink>
           </div>
         </div>
       </nav>

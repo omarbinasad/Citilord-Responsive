@@ -53,10 +53,25 @@
   align-items: center;
   margin-top: 50px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 850px) {
   .description-container {
     width: auto;
     height: auto;
     /* margin: auto; */
+  }
+}
+@media only screen and (max-width: 1300px) and (min-width: 851px) {
+  .description-container {
+    width: 31%;
+  }
+  .property-desc-title {
+    font-size: 15px;
+  }
+  .proeprty-desc-icons {
+    padding: 5px;
+    margin: 5px;
+  }
+  .property-desc-brief {
+    padding: 5px;
   }
 }

@@ -7,7 +7,7 @@
 
 /* MEDIA QUERIES  */
 /* for mobile */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 850px) {
   .carosel-menutab-description-container {
     flex-direction: column;
   }
@@ -15,4 +15,3 @@
     width: 100%;
   }
 }
-
