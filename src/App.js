@@ -34,6 +34,10 @@ import "aos/dist/aos.css";
 import { UserProfile } from "./Pages/UserProfile/Page/UserProfile";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
+
+
+
+
 const App = () => {
   useEffect(() => {
     AOS.init({

@@ -3,6 +3,7 @@ import "./NavBar.css";
 // import Logo from "../citiLordlogo.png.png";
 import Logo from "./citilordLogo.png";
 import { NavLink } from "react-router-dom";
+
 import {
   Avatar,
   Button,
@@ -17,8 +18,10 @@ import SearchShortlet from "../../../Pages/Home/components/DialogSearchBox/Searc
 import SearchLonglet from "../../../Pages/Home/components/DialogSearchBox/SearchLonglet/SearchLonglet";
 import SearchForSale from "../../../Pages/Home/components/DialogSearchBox/SearchForSale/SearchForSale";
 import { CallMissedSharp, Cancel, Close } from "@material-ui/icons";
+import useFirebase from "../../../hooks/useFirebase";
 
 const NavBar = () => {
+  const { user, LogOut } = useFirebase();
   const [state, setState] = useState(false);
 
   const toggleDrawer = (open) => (event) => {
@@ -154,42 +157,49 @@ const NavBar = () => {
                   Contact
                 </NavLink>
               </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link custom-dropdown-link"
-                  href="/"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <Avatar
-                    className="nav-item dropdown"
-                    src="/broken-image.jpg"
-                  />
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <NavLink className="dropdown-item" to="/user-profile">
-                      Profile
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink className="dropdown-item" to="#">
-                      Logout
-                    </NavLink>
-                  </li>
-                </ul>
-              </li>
+              {user?.email ? (
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link custom-dropdown-link"
+                    href="/"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <Avatar className="nav-item dropdown" src={user.photoURL} />
+                  </a>
+                  <ul
+                    className="user-dropdown dropdown-menu"
+                    aria-labelledby="navbarDropdown"
+                  >
+                    <li>
+                      <NavLink className="dropdown-item" to="/user-profile">
+                        Profile
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        onClick={LogOut}
+                        className="dropdown-item"
+                        to="/"
+                      >
+                        Logout
+                      </NavLink>
+                    </li>
+                  </ul>
+                </li>
+              ) : (
+                <NavLink className="" to="/user-login">
+                  <button
+                    className="my-citi-lord-btn btn btn-default me-3"
+                    type="submit"
+                  >
+                    Login
+                  </button>
+                </NavLink>
+              )}
             </ul>
-            <NavLink className="" to="/user-login">
-              <button
-                className="my-citi-lord-btn btn btn-default me-3"
-                type="submit"
-              >
-                Login
-              </button>
-            </NavLink>
           </div>
         </div>
       </nav>

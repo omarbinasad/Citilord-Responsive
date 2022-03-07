@@ -66,6 +66,14 @@ const Register = () => {
           <TextField
             className={clsx(classes.margin, classes.border, classes.textField)}
             id="outlined-basic"
+            label="Name"
+            variant="outlined"
+          />
+        </div>
+        <div className="register-form-wraper">
+          <TextField
+            className={clsx(classes.margin, classes.border, classes.textField)}
+            id="outlined-basic"
             label="Email"
             variant="outlined"
           />
@@ -105,9 +113,10 @@ const Register = () => {
           Register
         </button>
       </form>
-      <Link to="/user-login">
-        <p>Already have an account? Log in</p>
-      </Link>
+
+      <h5 className="mt-3">
+        Already have an account? <Link to="/user-login">Log in</Link>
+      </h5>
     </div>
   );
 };
