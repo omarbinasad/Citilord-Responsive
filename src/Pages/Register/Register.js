@@ -11,6 +11,9 @@ import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import { Link } from "react-router-dom";
 import "./Register.css";
+import GoogleLogo from "../Login/google-logo.png";
+import useFirebase from "../../hooks/useFirebase";
+import { Alert } from "@material-ui/lab";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,97 +29,161 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Register = () => {
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [pass, setPass] = useState("");
+  const {
+    signInUsingGoogle,
+    handleRegister,
+    handleNameChange,
+    handleEmailChange,
+    handleChange,
+    handleClickShowPassword,
+    values,
+    error,
+  } = useFirebase();
   const classes = useStyles();
-  const [values, setValues] = useState({
-    amount: "",
-    password: "",
-    weight: "",
-    weightRange: "",
-    showPassword: false,
-  });
+  // const [values, setValues] = useState({
+  //   amount: "",
+  //   password: "",
+  //   weight: "",
+  //   weightRange: "",
+  //   showPassword: false,
+  // });
+  // Password change handler
+  // const handleChange = (prop) => (event) => {
+  //   setValues({ ...values, [prop]: event.target.value });
+  //   console.log(event.target.value);
+  //   setPass(event.target.value);
+  // };
 
-  const handleChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.value });
-  };
-
-  const handleClickShowPassword = () => {
-    setValues({ ...values, showPassword: !values.showPassword });
-  };
+  // const handleClickShowPassword = () => {
+  //   setValues({ ...values, showPassword: !values.showPassword });
+  // };
 
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
+  // registration handler
+  // const handleRegister = (event) => {
+  //   event.preventDefault();
+  //   console.log(name, email, pass);
+  // };
+  // Name change handler
+  // const handleNameChange = (event) => {
+  //   console.log(event.target.value);
+  //   setName(event.target.value);
+  // };
+  // Email change handler
+  // const handleEmailChange = (event) => {
+  //   console.log(event.target.value);
+  //   setEmail(event.target.value);
+  // };
+  // Password change handler
+  // const handlePassChange = (event) => {
+  //   console.log(event.target.value);
+  //   setPass(event.target.value);
+  // };
 
   return (
     <div className="register-page-main">
-      <h1 data-aos="fade-down">Register</h1>
-      <form
-        data-aos="zoom-in"
-        data-aos-duration="800"
-        className="register-form"
-      >
-        <div className="register-form-wraper">
-          {/* <label for="email">Email</label>
+      <div className="register-form-div">
+        <h1 data-aos="fade-down">Register</h1>
+        <form
+          onSubmit={handleRegister}
+          data-aos="zoom-in"
+          data-aos-duration="800"
+          className="register-form"
+        >
+          <div className="register-form-wraper">
+            {/* <label for="email">Email</label>
           <input
             type="email"
             name="email"
             autocomplete="off"
             placeholder="email@example.com"
           /> */}
-          <TextField
-            className={clsx(classes.margin, classes.border, classes.textField)}
-            id="outlined-basic"
-            label="Name"
-            variant="outlined"
-          />
-        </div>
-        <div className="register-form-wraper">
-          <TextField
-            className={clsx(classes.margin, classes.border, classes.textField)}
-            id="outlined-basic"
-            label="Email"
-            variant="outlined"
-          />
-        </div>
-        <div className="register-form-wraper">
-          {/* <label for="password">Password</label>
-          <input type="password" name="password" /> */}
-          <FormControl
-            className={clsx(classes.margin, classes.textField)}
-            variant="outlined"
-          >
-            <InputLabel htmlFor="outlined-adornment-password">
-              Password
-            </InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-password"
-              type={values.showPassword ? "text" : "password"}
-              value={values.password}
-              onChange={handleChange("password")}
-              endAdornment={
-                <InputAdornment position="end">
-                  <IconButton
-                    aria-label="toggle password visibility"
-                    onClick={handleClickShowPassword}
-                    onMouseDown={handleMouseDownPassword}
-                    edge="end"
-                  >
-                    {values.showPassword ? <Visibility /> : <VisibilityOff />}
-                  </IconButton>
-                </InputAdornment>
-              }
-              labelWidth={70}
+            <TextField
+              className={clsx(
+                classes.margin,
+                classes.border,
+                classes.textField
+              )}
+              name="Name"
+              onBlur={handleNameChange}
+              id="outlined-basic"
+              label="Name"
+              variant="outlined"
             />
-          </FormControl>
-        </div>
-        <button className="register-submit-btn" type="submit">
-          Register
-        </button>
-      </form>
+          </div>
+          <div className="register-form-wraper">
+            <TextField
+              className={clsx(
+                classes.margin,
+                classes.border,
+                classes.textField
+              )}
+              onBlur={handleEmailChange}
+              type="email"
+              id=""
+              label="Email"
+              variant="outlined"
+            />
+          </div>
+          <div className="register-form-wraper">
+            {/* <label for="password">Password</label>
+          <input type="password" name="password" /> */}
+            <FormControl
+              className={clsx(classes.margin, classes.textField)}
+              variant="outlined"
+            >
+              <InputLabel htmlFor="outlined-adornment-password">
+                Password
+              </InputLabel>
+              <OutlinedInput
+                id="outlined-adornment-password"
+                type={values.showPassword ? "text" : "password"}
+                value={values.password}
+                onChange={handleChange("password")}
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="toggle password visibility"
+                      onClick={handleClickShowPassword}
+                      onMouseDown={handleMouseDownPassword}
+                      edge="end"
+                    >
+                      {values.showPassword ? <Visibility /> : <VisibilityOff />}
+                    </IconButton>
+                  </InputAdornment>
+                }
+                labelWidth={70}
+              />
+            </FormControl>
+          </div>
+          <button className="register-submit-btn" type="submit">
+            Register
+          </button>
+        </form>
 
-      <h5 className="mt-3">
+        {/* error message */}
+        <div className="mt-3">
+          {error && <Alert severity="error">{error}</Alert>}
+        </div>
+        <h3 className="or-text">
+          ----------- <span>Or</span> ----------
+        </h3>
+        <div>
+          {/* google sign in btn */}
+          <button onClick={signInUsingGoogle} className="google-signin-btn">
+            <img className="text-start" src={GoogleLogo} alt="" />
+            <span>Continue with google</span>
+          </button>
+        </div>
+      </div>
+      <h6 className="bottom-text mt-3">
         Already have an account? <Link to="/user-login">Log in</Link>
-      </h5>
+      </h6>
     </div>
   );
 };

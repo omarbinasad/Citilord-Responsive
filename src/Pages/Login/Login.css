@@ -11,13 +11,14 @@
 }
 
 .login-page-main h1 {
-  /* margin-top: 48px; */
+  text-align: center;
+  margin-bottom: 20px;
 }
 .login-form-div {
   background: #fff;
   max-width: 380px;
   width: 100%;
-  padding: 58px 44px;
+  padding: 35px 35px;
   border: 1px solid #e1e2f0;
   border-radius: 4px;
   box-shadow: 0 0 5px 0 rgba(42, 45, 48, 0.12);
@@ -103,6 +104,10 @@
 .or-text span {
   color: #272727;
 }
+.forgot-pass-text {
+  text-align: end;
+  margin-right: 10px;
+}
 
 .google-signin-btn {
   display: flex;
@@ -133,4 +138,7 @@
   flex-grow: 2;
   text-align: center;
   font-size: 18px !important;
+}
+.bottom-text {
+  text-align: center;
 }

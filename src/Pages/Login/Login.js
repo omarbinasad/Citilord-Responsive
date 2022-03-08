@@ -28,23 +28,31 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Login = () => {
-  const { signInUsingGoogle } = useFirebase();
+  const {
+    signInUsingGoogle,
+    handleResetPass,
+    handleLogin,
+    handleChange,
+    handleEmailChange,
+    handleClickShowPassword,
+    values,
+  } = useFirebase();
   const classes = useStyles();
-  const [values, setValues] = useState({
-    amount: "",
-    password: "",
-    weight: "",
-    weightRange: "",
-    showPassword: false,
-  });
+  // const [values, setValues] = useState({
+  //   amount: "",
+  //   password: "",
+  //   weight: "",
+  //   weightRange: "",
+  //   showPassword: false,
+  // });
 
-  const handleChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.value });
-  };
+  // const handleChange = (prop) => (event) => {
+  //   setValues({ ...values, [prop]: event.target.value });
+  // };
 
-  const handleClickShowPassword = () => {
-    setValues({ ...values, showPassword: !values.showPassword });
-  };
+  // const handleClickShowPassword = () => {
+  //   setValues({ ...values, showPassword: !values.showPassword });
+  // };
 
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
@@ -54,7 +62,12 @@ const Login = () => {
     <div className="login-page-main">
       <div className="login-form-div">
         <h1 data-aos="fade-down">Log In</h1>
-        <form data-aos="zoom-in" data-aos-duration="800" className="login-form">
+        <form
+          onSubmit={handleLogin}
+          data-aos="zoom-in"
+          data-aos-duration="800"
+          className="login-form"
+        >
           <div className="login-form-wraper">
             {/* <label for="email">Email</label>
           <input
@@ -69,6 +82,8 @@ const Login = () => {
                 classes.border,
                 classes.textField
               )}
+              onBlur={handleEmailChange}
+              type="email"
               id="outlined-basic"
               label="Email"
               variant="outlined"
@@ -105,6 +120,9 @@ const Login = () => {
               />
             </FormControl>
           </div>
+          <Link to="" onClick={handleResetPass}>
+            <p className="forgot-pass-text">Forgot Password</p>
+          </Link>
           <button className="login-submit-btn" type="submit">
             Log In
           </button>
@@ -120,10 +138,9 @@ const Login = () => {
           </button>
         </div>
       </div>
-
-      <h5 className="mt-3">
+      <h6 className="bottom-text mt-3">
         Don't have an account? <Link to="/user-register">Register</Link>
-      </h5>
+      </h6>
     </div>
   );
 };

@@ -11,13 +11,24 @@
 }
 
 .register-page-main h1 {
-  margin-top: 48px;
+  text-align: center;
+  margin-bottom: 20px;
 }
-.register-page-main .register-form {
+/* .register-page-main .register-form {
   background: #fff;
   max-width: 360px;
   width: 100%;
   padding: 58px 44px;
+  border: 1px solid #e1e2f0;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 0 rgba(42, 45, 48, 0.12);
+  transition: all 0.3s ease;
+} */
+.register-form-div {
+  background: #fff;
+  max-width: 380px;
+  width: 100%;
+  padding: 35px 35px;
   border: 1px solid #e1e2f0;
   border-radius: 4px;
   box-shadow: 0 0 5px 0 rgba(42, 45, 48, 0.12);
