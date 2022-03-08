@@ -9,10 +9,11 @@ import FormControl from "@material-ui/core/FormControl";
 import TextField from "@material-ui/core/TextField";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import GoogleLogo from "./google-logo.png";
 import "./Login.css";
-import useFirebase from "../../hooks/useFirebase";
+// import useFirebase from "../../hooks/useFirebase";
+import useAuth from "../../hooks/useAuth";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,7 +37,33 @@ const Login = () => {
     handleEmailChange,
     handleClickShowPassword,
     values,
-  } = useFirebase();
+    setError,
+    setUserName,
+
+    // handleGoogleLogIn,
+  } = useAuth();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const redirect_uri = location?.state?.from || "/user-profile";
+  // redirects login handler
+
+  const handleLoginRedirects = (e) => {
+    e.preventDefault();
+    handleLogin().then((result) => {
+      navigate(redirect_uri);
+      // const user = result.user;
+      setError("");
+      setUserName();
+      // console.log(user);
+    });
+  };
+
+  // google login handler
+  const handleGoogleLogIn = () => {
+    signInUsingGoogle().then((result) => {
+      navigate(redirect_uri);
+    });
+  };
   const classes = useStyles();
   // const [values, setValues] = useState({
   //   amount: "",
@@ -63,7 +90,7 @@ const Login = () => {
       <div className="login-form-div">
         <h1 data-aos="fade-down">Log In</h1>
         <form
-          onSubmit={handleLogin}
+          onSubmit={handleLoginRedirects}
           data-aos="zoom-in"
           data-aos-duration="800"
           className="login-form"
@@ -132,7 +159,7 @@ const Login = () => {
         </form>
         <div>
           {/* google sign in btn */}
-          <button onClick={signInUsingGoogle} className="google-signin-btn">
+          <button onClick={handleGoogleLogIn} className="google-signin-btn">
             <img className="text-start" src={GoogleLogo} alt="" />
             <span>Sign in with google</span>
           </button>

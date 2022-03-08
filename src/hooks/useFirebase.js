@@ -8,8 +8,11 @@ import {
   sendEmailVerification,
   signOut,
   sendPasswordResetEmail,
+  updateProfile,
 } from "firebase/auth";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+
 import initializeAuthentication from "../Firebase/firebase.initialize";
 
 initializeAuthentication();
@@ -34,23 +37,28 @@ const useFirebase = () => {
 
   // Registration handler Function
   const handleRegister = (event) => {
-    event.preventDefault();
-    console.log(name, email, pass);
+    // event.preventDefault();
+    // console.log(name, email, pass);
     if (pass.length < 6) {
       setError("Password should be at least 6 characters long");
       return;
     }
-    createUserWithEmailAndPassword(auth, email, pass)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-        setError("");
-        verifyEmail();
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+    return createUserWithEmailAndPassword(auth, email, pass);
+    // .then((result) => {
+    //   const user = result.user;
+    //   setError("");
+    //   verifyEmail();
+    //   setUserName();
+    //   console.log(user);
+    // })
+    // .catch((error) => {
+    //   setError(error.message);
+    // });
   };
+  const setUserName = () => {
+    updateProfile(auth.currentUser, { displayName: name }).then((result) => {});
+  };
+
   // Email verification function
   const verifyEmail = () => {
     sendEmailVerification(auth.currentUser).then((result) => {
@@ -65,16 +73,16 @@ const useFirebase = () => {
   };
   // Signin/Login handler Function
   const handleLogin = (event) => {
-    event.preventDefault();
-    signInWithEmailAndPassword(auth, email, pass)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-        setError("");
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+    // event.preventDefault();
+    return signInWithEmailAndPassword(auth, email, pass);
+    // .then((result) => {
+    //   const user = result.user;
+    //   console.log(user);
+    //   setError("");
+    // })
+    // .catch((error) => {
+    //   setError(error.message);
+    // });
   };
   // Name onchange handler
   const handleNameChange = (event) => {
@@ -89,7 +97,7 @@ const useFirebase = () => {
   // Password onchange handler
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setPass(event.target.value);
   };
   // password show hide handler
@@ -99,16 +107,21 @@ const useFirebase = () => {
 
   // google sign in function
   const signInUsingGoogle = () => {
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        console.log(result.user);
-        setUser(result.user);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+    return signInWithPopup(auth, googleProvider).catch((error) => {
+      setError(error.message);
+    });
   };
-  // logou function
+  // const signInUsingGoogle = () => {
+  //   signInWithPopup(auth, googleProvider)
+  //     .then((result) => {
+  //       console.log(result.user);
+  //       setUser(result.user);
+  //     })
+  //     .catch((error) => {
+  //       setError(error.message);
+  //     });
+  // };
+  // logout function
   const LogOut = () => {
     signOut(auth).then(() => {
       setUser({});
@@ -137,6 +150,9 @@ const useFirebase = () => {
     handleEmailChange,
     handleChange,
     LogOut,
+    setError,
+    setUserName,
+    verifyEmail,
   };
 };
 

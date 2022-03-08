@@ -9,11 +9,12 @@ import FormControl from "@material-ui/core/FormControl";
 import TextField from "@material-ui/core/TextField";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Register.css";
 import GoogleLogo from "../Login/google-logo.png";
-import useFirebase from "../../hooks/useFirebase";
+// import useFirebase from "../../hooks/useFirebase";
 import { Alert } from "@material-ui/lab";
+import useAuth from "../../hooks/useAuth";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,8 +41,33 @@ const Register = () => {
     handleChange,
     handleClickShowPassword,
     values,
+    setError,
+    verifyEmail,
+    setUserName,
     error,
-  } = useFirebase();
+  } = useAuth();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const redirect_uri = location?.state?.from || "/user-profile";
+
+  const handleRegisterRedirects = (e) => {
+    e.preventDefault();
+    handleRegister().then((result) => {
+      navigate(redirect_uri);
+      // const user = result.user;
+      setError("");
+      verifyEmail();
+      setUserName();
+      // console.log(user);
+    });
+  };
+
+  // google login handler
+  const handleGoogleLogIn = () => {
+    signInUsingGoogle().then((result) => {
+      navigate(redirect_uri);
+    });
+  };
   const classes = useStyles();
   // const [values, setValues] = useState({
   //   amount: "",
@@ -90,7 +116,7 @@ const Register = () => {
       <div className="register-form-div">
         <h1 data-aos="fade-down">Register</h1>
         <form
-          onSubmit={handleRegister}
+          onSubmit={handleRegisterRedirects}
           data-aos="zoom-in"
           data-aos-duration="800"
           className="register-form"
@@ -109,7 +135,6 @@ const Register = () => {
                 classes.border,
                 classes.textField
               )}
-              name="Name"
               onBlur={handleNameChange}
               id="outlined-basic"
               label="Name"
@@ -175,7 +200,7 @@ const Register = () => {
         </h3>
         <div>
           {/* google sign in btn */}
-          <button onClick={signInUsingGoogle} className="google-signin-btn">
+          <button onClick={handleGoogleLogIn} className="google-signin-btn">
             <img className="text-start" src={GoogleLogo} alt="" />
             <span>Continue with google</span>
           </button>

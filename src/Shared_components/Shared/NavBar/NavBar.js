@@ -18,10 +18,11 @@ import SearchShortlet from "../../../Pages/Home/components/DialogSearchBox/Searc
 import SearchLonglet from "../../../Pages/Home/components/DialogSearchBox/SearchLonglet/SearchLonglet";
 import SearchForSale from "../../../Pages/Home/components/DialogSearchBox/SearchForSale/SearchForSale";
 import { CallMissedSharp, Cancel, Close } from "@material-ui/icons";
-import useFirebase from "../../../hooks/useFirebase";
+import useAuth from "../../../hooks/useAuth";
+// import useFirebase from "../../../hooks/useFirebase";
 
 const NavBar = () => {
-  const { user, LogOut } = useFirebase();
+  const { user, LogOut } = useAuth();
   const [state, setState] = useState(false);
 
   const toggleDrawer = (open) => (event) => {

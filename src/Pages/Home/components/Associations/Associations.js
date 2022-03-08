@@ -20,89 +20,74 @@ const Associations = (props) => {
       <h2 className="text-center association-title">{props.name}</h2>
       <div className="py-5 d-flex">
         <div className="associations-slide">
-          <img
-            src="https://citylord.lovesbd.com/static/media/My%20deposits.7de6aeda.png"
-            alt=""
-          />
+          <img src="" alt="" />
         </div>
         <div className="associations-slide">
-          <img
-            src="https://citylord.lovesbd.com/static/media/The%20property.ab85afa0.jpg"
-            alt=""
-          />
+          <img src="" alt="" />
         </div>
 
         <div className="associations-slide">
-          <img
-            src="https://citylord.lovesbd.com/static/media/My%20deposits.7de6aeda.png"
-            alt=""
-          />
+          <img src="" alt="" />
         </div>
         <div className="associations-slide">
-          <img
-            src="https://citylord.lovesbd.com/static/media/The%20property.ab85afa0.jpg"
-            alt=""
-          />
+          <img src="" alt="" />
         </div>
         <div className="associations-slide">
-          <img
-            src="https://citylord.lovesbd.com/static/media/Zoopla.c7c101e3.png"
-            alt=""
-          />
+          <img src="" alt="" />
         </div>
       </div>
       {/* <Slider className="py-5" {...settings}>
         <div className="associations-slide">
           <img
-            src="https://citylord.lovesbd.com/static/media/My%20deposits.7de6aeda.png"
+            src=""
             alt=""
           />
         </div>
         <div className="associations-slide">
           <img
-            src="https://citylord.lovesbd.com/static/media/The%20property.ab85afa0.jpg"
+            src=""
             alt=""
           />
         </div>
         <div className="associations-slide">
           <img
-            src="https://citylord.lovesbd.com/static/media/Zoopla.c7c101e3.png"
+            src=""
             alt=""
           />
         </div>
         <div className="associations-slide">
           <img
-            src="https://citylord.lovesbd.com/static/media/Prime%20Location.0d989377.png"
+            src=""
             alt=""
           />
         </div>
         <div className="associations-slide">
           <img
-            src="https://citylord.lovesbd.com/static/media/Zoopla.c7c101e3.png"
+            src=""
             alt=""
           />
         </div>
         <div className="associations-slide">
           <img
-            src="https://citylord.lovesbd.com/static/media/The%20property.ab85afa0.jpg"
+            src=""
             alt=""
           />
         </div>
         <div className="associations-slide">
           <img
-            src="https://citylord.lovesbd.com/static/media/Zoopla.c7c101e3.png"
+            src=""
             alt=""
           />
         </div>
         <div className="associations-slide">
           <img
-            src="https://citylord.lovesbd.com/static/media/The%20property.ab85afa0.jpg"
+            src=""
             alt=""
           />
         </div>
         <div className="associations-slide">
           <img
-            src="https://citylord.lovesbd.com/static/media/Prime%20Location.0d989377.png"
+            src=""
             alt=""
           />
         </div>

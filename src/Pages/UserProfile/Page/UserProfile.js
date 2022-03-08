@@ -1,9 +1,10 @@
 import React from "react";
-import useFirebase from "../../../hooks/useFirebase";
+import useAuth from "../../../hooks/useAuth";
+// import useFirebase from "../../../hooks/useFirebase";
 import "./UserProfile.css";
 
 export const UserProfile = () => {
-  const { user } = useFirebase();
+  const { user } = useAuth();
   return (
     <div className="">
       <div className="user-profile-main rounded bg-white mt-5 mb-5">
