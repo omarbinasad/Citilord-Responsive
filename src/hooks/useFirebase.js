@@ -75,6 +75,7 @@ const useFirebase = () => {
   const handleLogin = (event) => {
     // event.preventDefault();
     return signInWithEmailAndPassword(auth, email, pass);
+
     // .then((result) => {
     //   const user = result.user;
     //   console.log(user);

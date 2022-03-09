@@ -7,6 +7,10 @@
   display: flex;
   justify-content: center;
 }
+.user-photo {
+  width: 150px !important;
+  height: 150px !important;
+}
 .user-profile-container {
   width: 70%;
 }

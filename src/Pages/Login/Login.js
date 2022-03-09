@@ -39,6 +39,7 @@ const Login = () => {
     values,
     setError,
     setUserName,
+    verifyEmail,
 
     // handleGoogleLogIn,
   } = useAuth();
@@ -51,10 +52,13 @@ const Login = () => {
     e.preventDefault();
     handleLogin().then((result) => {
       navigate(redirect_uri);
-      // const user = result.user;
+      const user = result.user;
       setError("");
       setUserName();
-      // console.log(user);
+      if (!user.emailVerified) {
+        verifyEmail();
+      }
+      console.log(user);
     });
   };
 

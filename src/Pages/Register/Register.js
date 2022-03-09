@@ -54,11 +54,11 @@ const Register = () => {
     e.preventDefault();
     handleRegister().then((result) => {
       navigate(redirect_uri);
-      // const user = result.user;
+      const user = result.user;
       setError("");
       verifyEmail();
       setUserName();
-      // console.log(user);
+      console.log(user);
     });
   };
 
