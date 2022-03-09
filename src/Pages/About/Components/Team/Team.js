@@ -16,7 +16,12 @@ const Team = () => {
 
       <section className="our-team-section">
         <div className="container">
-          <h1 className="text-center" style={{ fontWeight: "bold" }}>
+          <h1
+            className="text-center"
+            data-aos="zoom-in"
+            data-aos-once="true"
+            style={{ fontWeight: "bold" }}
+          >
             Team Members
           </h1>
           <div className="row">

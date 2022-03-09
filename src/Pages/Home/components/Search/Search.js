@@ -7,7 +7,11 @@ import { Link } from "react-router-dom";
 
 const Search = () => {
   return (
-    <div data-aos="zoom-in" className="searchBarContainer-main">
+    <div
+      data-aos="zoom-in"
+      data-aos-once="true"
+      className="searchBarContainer-main"
+    >
       <div className="searchBarContainer">
         {/* <h3 className="serch-bar-heading">Search Your Home</h3> */}
         {/* <h4 style={{ marginBottom: "20px", color: "black" }}>

@@ -6,7 +6,7 @@ import Map from "../Map/Map";
 const TimeTable = () => {
   return (
     <div className="timtable-container-main">
-      <p data-aos="fade-in" className="">
+      <p data-aos="fade-in" data-aos-once="true" className="">
         If you are a tenant looking for a rental property, or a landlord wanting
         to rent your property in Mile End, Tower Hamlets, East, North, North
         East and South East London, please don’t hesitate to get in touch. We
@@ -24,6 +24,7 @@ const TimeTable = () => {
         {/* table  */}
         <div
           data-aos="fade-right"
+          data-aos-once="true"
           className="contact-text-inner-div col-lg-4 px-3 pb-3"
         >
           <h3 className="">Office Opening & Closing Time</h3>
@@ -69,6 +70,7 @@ const TimeTable = () => {
         {/* map  */}
         <div
           data-aos="zoom-in"
+          data-aos-once="true"
           className="contact-text-inner-div col-lg-4 mx-3 p-2"
         >
           <Map></Map>
@@ -76,6 +78,7 @@ const TimeTable = () => {
         {/*-  contact Right Container-*/}
         <div
           data-aos="fade-left"
+          data-aos-once="true"
           className="contact-text-inner-div col-lg-4 p-3"
         >
           <div className="direct-contact-container">
@@ -335,6 +338,7 @@ const TimeTable = () => {
         </div> */}
         <div
           data-aos="zoom-in"
+          data-aos-once="true"
           className="contact-text-inner-div col-lg-3 px-3 me-1 "
         >
           <h3 className="text-center">Repair and Maintenance</h3>
@@ -348,6 +352,7 @@ const TimeTable = () => {
         </div>
         <div
           data-aos="zoom-in"
+          data-aos-once="true"
           className="contact-text-inner-div col-lg-3 mx-2 px-3"
         >
           <h3 className="text-center">Official Enquiries</h3>
@@ -360,6 +365,7 @@ const TimeTable = () => {
         </div>
         <div
           data-aos="zoom-in"
+          data-aos-once="true"
           className="contact-text-inner-div col-lg-3 ms-1 me-2 px-3"
         >
           <h3 className="text-center">Tenant's Reference</h3>
@@ -374,6 +380,7 @@ const TimeTable = () => {
 
         <div
           data-aos="zoom-in"
+          data-aos-once="true"
           className="contact-text-inner-div col-lg-3 px-3 ms-1"
         >
           <h3 className="text-center">Holiday Message</h3>

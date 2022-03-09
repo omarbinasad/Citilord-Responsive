@@ -55,6 +55,7 @@ const NavBar = () => {
             className="navbar-brand me-auto"
             data-aos="fade-right"
             data-aos-offset="300"
+            data-aos-once="true"
             data-aos-easing="ease-in-sine"
             data-aos-delay="1300"
             data-aos-duration="1000"

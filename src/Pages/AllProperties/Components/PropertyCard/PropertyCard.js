@@ -8,6 +8,7 @@ const PropertyCard = () => {
   return (
     <div
       data-aos="fade-left"
+      data-aos-once="true"
       data-aos-duration="1000"
       className="property-card"
     >
@@ -16,6 +17,7 @@ const PropertyCard = () => {
       </div>
       <div
         data-aos="fade-right"
+        data-aos-once="true"
         data-aos-duration="1000"
         data-aos-delay="1000"
         className="property-card-info"

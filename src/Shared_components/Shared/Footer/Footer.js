@@ -8,7 +8,11 @@ import appLogo4 from "./google.png";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer-section">
+      <footer
+        data-aos="fade-up"
+        data-aos-once="true"
+        className="footer-section"
+      >
         <div className="container">
           <div className="footer-cta pt-3 pb-2">
             <div className="row footer-nav">

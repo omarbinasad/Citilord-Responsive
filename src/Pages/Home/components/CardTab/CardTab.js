@@ -83,6 +83,7 @@ const CardTab = (props) => {
       {/* View All Property Button Start */}
       <div
         data-aos="zoom-in"
+        data-aos-once="true"
         className="cards-view-all-btns-div"
         //  style={{ display: "flex" }}
       >

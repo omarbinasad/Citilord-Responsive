@@ -8,6 +8,7 @@ const Cards = (props) => {
   return (
     <Badge
       data-aos="fade-up"
+      data-aos-once="true"
       badgeContent={props.name}
       anchorOrigin={{
         vertical: "top",

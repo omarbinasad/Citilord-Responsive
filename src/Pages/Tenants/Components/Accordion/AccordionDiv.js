@@ -39,7 +39,11 @@ const useStyles = makeStyles((theme) => ({
 const AccordionDiv = () => {
   const classes = useStyles();
   return (
-    <div className={classes.accordionContent}>
+    <div
+      data-aos="zoom-in"
+      data-aos-once="true"
+      className={classes.accordionContent}
+    >
       <div className={classes.root}>
         {/* accordion start */}
         <Accordion style={{ borderRadius: "10px" }}>

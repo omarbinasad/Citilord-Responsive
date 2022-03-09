@@ -18,6 +18,7 @@ const Gallery = () => {
           <div className="gallery-item">
             <img
               data-aos="zoom-in"
+              data-aos-once="true"
               className="gallery-image"
               src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&h=500&fit=crop"
               alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer"
@@ -26,6 +27,7 @@ const Gallery = () => {
           <div className="gallery-item">
             <img
               data-aos="zoom-in"
+              data-aos-once="true"
               className="gallery-image"
               src="https://images.unsplash.com/photo-1515260268569-9271009adfdb?w=500&h=500&fit=crop"
               alt="sunset behind San Francisco city skyline"
@@ -34,6 +36,7 @@ const Gallery = () => {
           <div className="gallery-item">
             <img
               data-aos="zoom-in"
+              data-aos-once="true"
               className="gallery-image"
               src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=500&h=500&fit=crop"
               alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan"
@@ -42,7 +45,9 @@ const Gallery = () => {
         </div>
         <div className="pt-4 d-flex justify-content-center align-items-center">
           <Link className="view-more-btn" to="/gallery">
-            <Button data-aos="zoom-in">View More</Button>
+            <Button data-aos="zoom-in" data-aos-once="true">
+              View More
+            </Button>
           </Link>
         </div>
       </div>

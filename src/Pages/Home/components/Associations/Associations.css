@@ -19,6 +19,7 @@
 
 .association-title {
   font-size: 30px;
-  font-weight: bold;
+  text-align: center;
+  /* font-weight: bold; */
   color: black;
 }

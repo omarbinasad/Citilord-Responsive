@@ -17,46 +17,63 @@ const QuickLinksDiv = () => {
           <Link to="/tenant-registration">
             <Button
               data-aos="fade-right"
+              data-aos-once="true"
               variant="contained"
               className="custom-button-each"
             >
               <Home className="button-icon-quick-links-div" />
             </Button>
           </Link>
-          <p data-aos="fade-in" style={{ textAlign: "center" }}>
+          <p
+            data-aos="fade-in"
+            data-aos-once="true"
+            style={{ textAlign: "center" }}
+          >
             If you are looking to rent a property now or in future, please
             register your details here.
           </p>
         </div>
         <div className="button-and-title-container-each">
-          <h4 data-aos="fade-in">
+          <h4 data-aos="fade-in" data-aos-once="true">
             Instant online property valuation in 30 seconds
           </h4>
 
           <Button
             data-aos="zoom-in"
+            data-aos-once="true"
             variant="contained"
             className="custom-button-each"
           >
             <House className="button-icon-quick-links-div" />
           </Button>
 
-          <p data-aos="fade-in" style={{ textAlign: "center" }}>
+          <p
+            data-aos="fade-in"
+            data-aos-once="true"
+            style={{ textAlign: "center" }}
+          >
             The valuation to see what you can achieve for your property.
           </p>
         </div>
         <div className="button-and-title-container-each">
-          <h4 data-aos="fade-in">Request a property valuation</h4>
+          <h4 data-aos="fade-in" data-aos-once="true">
+            Request a property valuation
+          </h4>
           <Link to="/free-valuation">
             <Button
               data-aos="fade-left"
+              data-aos-once="true"
               variant="contained"
               className="custom-button-each"
             >
               <Description className="button-icon-quick-links-div" />
             </Button>
           </Link>
-          <p data-aos="fade-in" style={{ textAlign: "center" }}>
+          <p
+            data-aos="fade-in"
+            data-aos-once="true"
+            style={{ textAlign: "center" }}
+          >
             Setting a successful rental price for your property is a balance
             Citi Lord can help you with.
           </p>

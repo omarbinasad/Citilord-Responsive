@@ -76,6 +76,7 @@ const ContactForm = () => {
           {/* <!-- Left contact page -->  */}
           <div
             data-aos="fade-right"
+            data-aos-once="true"
             className="contact-text-inner-div contact-form-div col-lg-4 p-3"
           >
             <form id="contact-form" className="form-horizontal" role="form">
@@ -142,6 +143,7 @@ const ContactForm = () => {
 
           <div
             data-aos="zoom-in"
+            data-aos-once="true"
             className="contact-text-inner-div contact-text-inner-landlord d-flex justify-content-center align-items-center col-lg-4 mx-3"
           >
             <div className="landlord-section">
@@ -185,6 +187,7 @@ const ContactForm = () => {
           </div>
           <div
             data-aos="fade-left"
+            data-aos-once="true"
             className="contact-text-inner-div contact-text-inner-tanents col-lg-4 d-flex justify-content-center align-items-center "
           >
             <div className="tenants-section">
@@ -212,7 +215,7 @@ const ContactForm = () => {
                   <Button
                     variant="contained"
                     // color="color2"
-                    style={{ fontWeight: "bold" }}
+
                     onClick={handleOpen4}
                     style={{
                       fontWeight: "bold",

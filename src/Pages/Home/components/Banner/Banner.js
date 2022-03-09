@@ -192,6 +192,7 @@ const Banner = () => {
     <div>
       <div
         data-aos="zoom-in"
+       
         className="banner-wrapper-main d-flex align-items-center justify-content-center"
       >
         <div className="welcome-and-icons-container">

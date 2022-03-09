@@ -10,6 +10,7 @@ const Photos = () => {
             <a href="#lightbox_1">
               <img
                 data-aos="zoom-in"
+                data-aos-once="true"
                 src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&h=500&fit=crop"
                 alt="Summer Season"
                 className="image"
@@ -20,6 +21,7 @@ const Photos = () => {
             <a href="#lightbox_2">
               <img
                 data-aos="zoom-in"
+                data-aos-once="true"
                 src="https://images.unsplash.com/photo-1515260268569-9271009adfdb?w=500&h=500&fit=crop"
                 alt="Summer Season"
                 className="image"
@@ -30,6 +32,7 @@ const Photos = () => {
             <a href="#lightbox_3">
               <img
                 data-aos="zoom-in"
+                data-aos-once="true"
                 src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=500&h=500&fit=crop"
                 alt="Summer Season"
                 className="image"
@@ -40,6 +43,7 @@ const Photos = () => {
             <a href="#lightbox_1">
               <img
                 data-aos="zoom-in"
+                data-aos-once="true"
                 src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&h=500&fit=crop"
                 alt="Summer Season"
                 className="image"
@@ -50,6 +54,7 @@ const Photos = () => {
             <a href="#lightbox_2">
               <img
                 data-aos="zoom-in"
+                data-aos-once="true"
                 src="https://images.unsplash.com/photo-1515260268569-9271009adfdb?w=500&h=500&fit=crop"
                 alt="Summer Season"
                 className="image"
@@ -60,6 +65,7 @@ const Photos = () => {
             <a href="#lightbox_3">
               <img
                 data-aos="zoom-in"
+                data-aos-once="true"
                 src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=500&h=500&fit=crop"
                 alt="Summer Season"
                 className="image"

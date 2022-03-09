@@ -6,11 +6,16 @@ const TenantsGuide = () => {
   return (
     <div>
       <div className="container">
-        <div data-aos="fade-up" className="bg-warning tenantsGuide-title-div">
+        <div
+          data-aos="fade-up"
+          data-aos-once="true"
+          className="bg-warning tenantsGuide-title-div"
+        >
           <h1 className="text-center">Services for Tenants</h1>
         </div>
         <h4
           data-aos="fade-up"
+          data-aos-once="true"
           style={{ marginBottom: "10px", marginTop: "10px" }}
         >
           TENANT'S GUIDE
@@ -19,13 +24,18 @@ const TenantsGuide = () => {
           <div className="tenantsGuide-img-div">
             <img
               data-aos="zoom-in"
+              data-aos-once="true"
               src={TenantsGuideImg}
               alt=""
               width="300"
               height="200"
             />
           </div>
-          <div data-aos="fade-up" className="tenantsGuide-text-div">
+          <div
+            data-aos="fade-up"
+            data-aos-once="true"
+            className="tenantsGuide-text-div"
+          >
             <p>
               Tenants information and terms & conditions to rent a property from
               Citi Lord Ltd.

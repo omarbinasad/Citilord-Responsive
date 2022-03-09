@@ -28,7 +28,7 @@ const BannerButton2 = styled(Button)({
 const ContactBanner = () => {
   return (
     <div>
-      <div class="contact-banner" data-aos="zoom-in">
+      <div class="contact-banner" data-aos="zoom-in" data-aos-once="true">
         <div className="contact-banner-button-div">
           <div className="contact-banner-buttons">
             <Link to={"/free-valuation"} style={{ textDecoration: "none" }}>
@@ -36,6 +36,7 @@ const ContactBanner = () => {
                 variant="contained"
                 style={{ background: "green", fontWeight: "bold" }}
                 data-aos="fade-right"
+                data-aos-once="true"
                 data-aos-delay="1500"
                 data-aos-duration="1000"
               >
@@ -49,6 +50,7 @@ const ContactBanner = () => {
                 data-aos="fade-left"
                 data-aos-delay="1500"
                 data-aos-duration="1000"
+                data-aos-once="true"
               >
                 Quick-response
               </BannerButton2>

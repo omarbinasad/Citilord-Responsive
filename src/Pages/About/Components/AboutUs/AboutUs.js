@@ -15,10 +15,11 @@ const AboutUs = () => {
       <div className="about-section-container">
         <img
           data-aos="zoom-in"
+          data-aos-once="true"
           src="https://cdn.pixabay.com/photo/2018/01/28/10/08/purchase-3113198_960_720.jpg"
           alt="about-img"
         />
-        <p data-aos="fade-up">
+        <p data-aos="fade-up" data-aos-once="true">
           Combining expertise, knowledge of the London rental market and modern
           marketing, Citi Lord offers both landlords and tenants the best value
           and service in lettings and property management. Covering property in
@@ -31,7 +32,7 @@ const AboutUs = () => {
           appointment basis), allowing us to respond to any our clients’ needs
           promptly and effectively.
         </p>
-        <p data-aos="fade-up">
+        <p data-aos="fade-up" data-aos-once="true">
           Citi Lord’s success has been built upon the single-minded desire and
           determination of our staff to provide clients, with exceptional,
           dedicated and personalised service, a commitment evidenced by our
@@ -40,7 +41,12 @@ const AboutUs = () => {
           at any time without an appointment. We always have friendly and
           professional staff on hand to deal directly with any questions or
           queries you may have.{" "}
-          <p data-aos="fade-in" className="collapse" id="collapseExample">
+          <p
+            data-aos="fade-in"
+            data-aos-once="true"
+            className="collapse"
+            id="collapseExample"
+          >
             With a good knowledge of letting market and our modern technology we
             use daily basis which help us to offers a new experience to let and
             manage property in London and Essex. From the beginning of the
@@ -81,6 +87,7 @@ const AboutUs = () => {
         </p>
         <button
           data-aos="zoom-in"
+          data-aos-once="true"
           className="btn btn-default read-more-btn"
           type="button"
           data-bs-toggle="collapse"

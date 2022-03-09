@@ -113,14 +113,16 @@ const Register = () => {
 
   return (
     <div className="register-page-main">
-      <div className="register-form-div">
-        <h1 data-aos="fade-down">Register</h1>
-        <form
-          onSubmit={handleRegisterRedirects}
-          data-aos="zoom-in"
-          data-aos-duration="800"
-          className="register-form"
-        >
+      <div
+        data-aos="zoom-in"
+        data-aos-once="true"
+        data-aos-duration="800"
+        className="register-form-div"
+      >
+        <h1 data-aos="fade-down" data-aos-once="true">
+          Register
+        </h1>
+        <form onSubmit={handleRegisterRedirects} className="register-form">
           <div className="register-form-wraper">
             {/* <label for="email">Email</label>
           <input

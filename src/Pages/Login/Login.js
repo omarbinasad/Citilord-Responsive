@@ -91,14 +91,14 @@ const Login = () => {
 
   return (
     <div className="login-page-main">
-      <div className="login-form-div">
+      <div
+        data-aos="zoom-in"
+        data-aos-once="true"
+        data-aos-duration="800"
+        className="login-form-div"
+      >
         <h1 data-aos="fade-down">Log In</h1>
-        <form
-          onSubmit={handleLoginRedirects}
-          data-aos="zoom-in"
-          data-aos-duration="800"
-          className="login-form"
-        >
+        <form onSubmit={handleLoginRedirects} className="login-form">
           <div className="login-form-wraper">
             {/* <label for="email">Email</label>
           <input
@@ -165,7 +165,7 @@ const Login = () => {
           {/* google sign in btn */}
           <button onClick={handleGoogleLogIn} className="google-signin-btn">
             <img className="text-start" src={GoogleLogo} alt="" />
-            <span>Sign in with google</span>
+            <span>Continue with google</span>
           </button>
         </div>
       </div>

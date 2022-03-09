@@ -135,8 +135,6 @@ const LandlordTanents = () => {
               </div>
               <Button
                 variant="contained"
-                // color="color2"
-                style={{ fontWeight: "bold" }}
                 onClick={handleOpen4}
                 style={{
                   fontWeight: "bold",

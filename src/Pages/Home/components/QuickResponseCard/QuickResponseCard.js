@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 const QuickResponseCard = (props) => {
   const { title, buttonName, buttonLink, cardIcon } = props;
   return (
-    <div class="fancy-cards">
-      <div class="fancy-card">
-        <div class="top">
+    <div className="fancy-cards">
+      <div className="fancy-card">
+        <div className="top">
           <div>{cardIcon}</div>
-          <div class="caption">
-            <h3 class="title">{title}</h3>
+          <div className="caption">
+            <h3 className="title">{title}</h3>
             <Link
               to={{
                 pathname: buttonLink,
@@ -20,8 +20,8 @@ const QuickResponseCard = (props) => {
             </Link>
           </div>
         </div>
-        <div class="middle"></div>
-        <div class="bottom"></div>
+        <div className="middle"></div>
+        <div className="bottom"></div>
       </div>
     </div>
   );

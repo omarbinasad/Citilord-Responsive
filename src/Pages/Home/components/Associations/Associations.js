@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 import "./Associations.css";
 import Slider from "react-slick";
+import companyLogo from "./companyLogo.png";
 
 const Associations = (props) => {
   const settings = {
@@ -17,23 +18,43 @@ const Associations = (props) => {
   };
   return (
     <div className="container association-container-extra">
-      <h2 className="text-center association-title">{props.name}</h2>
+      <h3 className="association-title">{props.name}</h3>
       <div className="py-5 d-flex">
-        <div className="associations-slide">
-          <img src="" alt="" />
+        <div
+          data-aos="zoom-in"
+          data-aos-once="true"
+          className="associations-slide"
+        >
+          <img src={companyLogo} alt="" />
         </div>
-        <div className="associations-slide">
-          <img src="" alt="" />
+        <div
+          data-aos="zoom-in"
+          data-aos-once="true"
+          className="associations-slide"
+        >
+          <img src={companyLogo} alt="" />
         </div>
 
-        <div className="associations-slide">
-          <img src="" alt="" />
+        <div
+          data-aos="zoom-in"
+          data-aos-once="true"
+          className="associations-slide"
+        >
+          <img src={companyLogo} alt="" />
         </div>
-        <div className="associations-slide">
-          <img src="" alt="" />
+        <div
+          data-aos="zoom-in"
+          data-aos-once="true"
+          className="associations-slide"
+        >
+          <img src={companyLogo} alt="" />
         </div>
-        <div className="associations-slide">
-          <img src="" alt="" />
+        <div
+          data-aos="zoom-in"
+          data-aos-once="true"
+          className="associations-slide"
+        >
+          <img src={companyLogo} alt="" />
         </div>
       </div>
       {/* <Slider className="py-5" {...settings}>
