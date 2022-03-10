@@ -3,6 +3,13 @@
   box-shadow: none;
   border: none;
 }
+.user-profile-ver-main {
+  height: 40vh;
+}
+
+.user-profile-ver-main h2 {
+  text-align: center;
+}
 .user-profile-main {
   display: flex;
   justify-content: center;

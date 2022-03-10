@@ -1,11 +1,32 @@
 import { Avatar } from "@material-ui/core";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useAuth from "../../../hooks/useAuth";
 // import useFirebase from "../../../hooks/useFirebase";
 import "./UserProfile.css";
+// import { getStorage, ref, uploadBytes } from "firebase/storage";
 
 export const UserProfile = () => {
-  const { user } = useAuth();
+  const { user, uploadImage } = useAuth();
+  const [photo, setPhoto] = useState(null);
+  const [photoURL, setPhotoURL] = useState("");
+
+  // upload image onchange handler
+  const handleFileChange = (e) => {
+    if (e.target.files[0]) {
+      setPhoto(e.target.files[0]);
+    }
+  };
+
+  const handleSaveClick = () => {
+    uploadImage(photo, user);
+  };
+
+  useEffect(() => {
+    if (user?.photoURL) {
+      setPhotoURL(user.photoURL);
+    }
+  }, [user]);
+
   return (
     <div className="">
       <div className="user-profile-main rounded bg-white mt-5 mb-5">
@@ -26,10 +47,11 @@ export const UserProfile = () => {
                   /> */}
                   <Avatar
                     className="user-photo rounded-circle mt-5"
-                    src={user.photoURL}
+                    src={photoURL}
                   />
                 </label>
                 <input
+                  onChange={handleFileChange}
                   style={{ visibility: "hidden" }}
                   type="file"
                   id="file-input"
@@ -144,6 +166,7 @@ export const UserProfile = () => {
                 </div>
                 <div className="mt-5 text-center">
                   <button
+                    onClick={handleSaveClick}
                     className="btn btn-primary profile-button"
                     type="button"
                   >
@@ -155,8 +178,10 @@ export const UserProfile = () => {
             {/* <div className="col-md-4"></div> */}
           </div>
         ) : (
-          <div className="user-profile-container shadow row">
-            <h1>A verification link has been sent to your email account</h1>
+          <div className="user-profile-ver-main rounded bg-white mt-5 mb-5">
+            <div className="user-profile-ver-container shadow row">
+              <h3>A verification link has been sent to your email account</h3>
+            </div>
           </div>
         )}
       </div>

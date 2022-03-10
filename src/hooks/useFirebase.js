@@ -12,6 +12,7 @@ import {
 } from "firebase/auth";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 import initializeAuthentication from "../Firebase/firebase.initialize";
 
@@ -33,7 +34,16 @@ const useFirebase = () => {
   const [error, setError] = useState("");
 
   const auth = getAuth();
+  const storage = getStorage();
   const googleProvider = new GoogleAuthProvider();
+
+  async function uploadImage(file, user) {
+    const fileRef = ref(storage, `${user.uid}/profile.jpg`);
+    const snapshot = await uploadBytes(fileRef, file);
+    const downloadURL = await getDownloadURL(fileRef);
+    updateProfile(user, { photoURL: downloadURL });
+    alert("Image uploaded");
+  }
 
   // Registration handler Function
   const handleRegister = (event) => {
@@ -154,6 +164,7 @@ const useFirebase = () => {
     setError,
     setUserName,
     verifyEmail,
+    uploadImage,
   };
 };
 

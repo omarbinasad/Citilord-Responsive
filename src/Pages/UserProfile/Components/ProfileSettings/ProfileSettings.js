@@ -1,6 +1,5 @@
-import React from "react";
-import "./ProfileSettings.css";
+// import React from "react";
 
-export const ProfileSettings = () => {
-  return <div>ProfileSettings</div>;
-};
+// export const ProfileSettings = () => {
+//   return <div>ProfileSettings</div>;
+// };
