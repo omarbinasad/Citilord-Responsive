@@ -159,7 +159,7 @@ const NavBar = () => {
                   Contact
                 </NavLink>
               </li>
-              {user?.email ? (
+              {user?.email && user.emailVerified ? (
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link custom-dropdown-link"
@@ -184,7 +184,7 @@ const NavBar = () => {
                       <NavLink
                         onClick={LogOut}
                         className="dropdown-item"
-                        to="/"
+                        to="/user-login"
                       >
                         Logout
                       </NavLink>
@@ -192,14 +192,14 @@ const NavBar = () => {
                   </ul>
                 </li>
               ) : (
-                <NavLink className="" to="/user-login">
+                <a className="" href="/user-login">
                   <button
                     className="my-citi-lord-btn btn btn-default me-3"
                     type="submit"
                   >
                     Login
                   </button>
-                </NavLink>
+                </a>
               )}
             </ul>
           </div>

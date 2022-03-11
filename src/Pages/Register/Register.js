@@ -49,14 +49,19 @@ const Register = () => {
 
   const handleRegisterRedirects = (e) => {
     e.preventDefault();
-    handleRegister().then((result) => {
-      navigate(redirect_uri);
-      const user = result.user;
-      setError("");
-      verifyEmail();
-      setUserName();
-      // console.log(user);
-    });
+    handleRegister()
+      .then((result) => {
+        navigate(redirect_uri);
+        const user = result.user;
+
+        verifyEmail();
+        setUserName();
+        setError("");
+        // console.log(user);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
 
   // google login handler
@@ -117,7 +122,9 @@ const Register = () => {
               onBlur={handleNameChange}
               id="outlined-basic"
               label="Name"
+              name="name"
               variant="outlined"
+              required
             />
           </div>
           <div className="register-form-wraper">
@@ -132,6 +139,7 @@ const Register = () => {
               id=""
               label="Email"
               variant="outlined"
+              required
             />
           </div>
           <div className="register-form-wraper">
@@ -145,6 +153,7 @@ const Register = () => {
                 Password
               </InputLabel>
               <OutlinedInput
+                required
                 id="outlined-adornment-password"
                 type={values.showPassword ? "text" : "password"}
                 value={values.password}

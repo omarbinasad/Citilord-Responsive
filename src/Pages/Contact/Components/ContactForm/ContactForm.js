@@ -84,7 +84,7 @@ const ContactForm = () => {
                 <div className="col-sm-12">
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control contact-form-input"
                     id="name"
                     placeholder="NAME"
                     name="name"
@@ -97,7 +97,7 @@ const ContactForm = () => {
                 <div className="col-sm-12">
                   <input
                     type="email"
-                    className="form-control"
+                    className="form-control contact-form-input"
                     id="email"
                     placeholder="EMAIL"
                     name="email"
@@ -110,7 +110,7 @@ const ContactForm = () => {
                 <div className="col-sm-12">
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control contact-form-input"
                     id="subject"
                     placeholder="SUBJECT"
                     name="subject"
@@ -120,7 +120,7 @@ const ContactForm = () => {
               </div>
 
               <textarea
-                className="form-control"
+                className="form-control contact-form-textarea"
                 rows="10"
                 placeholder="MESSAGE"
                 name="message"

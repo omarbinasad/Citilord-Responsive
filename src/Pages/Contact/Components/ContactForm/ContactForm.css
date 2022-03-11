@@ -37,11 +37,11 @@
   font-weight: 400;
 }
 
-.form-control,
-textarea {
+.contact-form-input,
+.contact-form-textarea {
   /* max-width: 50%; */
   margin-top: 14px;
-  color: #fff;
+  /* color: #fff; */
   letter-spacing: 1px;
   font-size: 12px;
 }

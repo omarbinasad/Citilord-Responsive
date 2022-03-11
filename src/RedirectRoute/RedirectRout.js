@@ -2,14 +2,14 @@ import React from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
-const PrivateRoute = ({ children, ...rest }) => {
+const RedirectRoute = ({ children, ...rest }) => {
   const { user } = useAuth();
 
   let location = useLocation();
-  if (user.email) {
+  if (!user.emailVerified) {
     return children;
   }
-  return <Navigate to="/user-login" state={{ from: location }} />;
+  return <Navigate to="/user-profile" state={{ from: location }} />;
 };
 
-export default PrivateRoute;
+export default RedirectRoute;

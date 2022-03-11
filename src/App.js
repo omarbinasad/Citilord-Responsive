@@ -36,6 +36,7 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import AuthProvider from "./Context/AuthProvider";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import RedirectRoute from "./RedirectRoute/RedirectRout";
 
 const App = () => {
   useEffect(() => {
@@ -99,8 +100,22 @@ const App = () => {
               </PrivateRoute>
             }
           ></Route>
-          <Route path="/user-login" element={<Login />}></Route>
-          <Route path="/user-register" element={<Register />}></Route>
+          <Route
+            path="/user-login"
+            element={
+              <RedirectRoute>
+                <Login />
+              </RedirectRoute>
+            }
+          ></Route>
+          <Route
+            path="/user-register"
+            element={
+              <RedirectRoute>
+                <Register />
+              </RedirectRoute>
+            }
+          ></Route>
         </Routes>
         <Footer />
       </Router>

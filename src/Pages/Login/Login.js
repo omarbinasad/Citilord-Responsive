@@ -14,6 +14,7 @@ import GoogleLogo from "./google-logo.png";
 import "./Login.css";
 // import useFirebase from "../../hooks/useFirebase";
 import useAuth from "../../hooks/useAuth";
+import { Alert } from "@material-ui/lab";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,6 +41,8 @@ const Login = () => {
     setError,
     setUserName,
     verifyEmail,
+    error,
+    user,
 
     // handleGoogleLogIn,
   } = useAuth();
@@ -50,16 +53,35 @@ const Login = () => {
 
   const handleLoginRedirects = (e) => {
     e.preventDefault();
-    handleLogin().then((result) => {
-      navigate(redirect_uri);
-      const user = result.user;
-      setError("");
-      if (!user.emailVerified) {
-        verifyEmail();
-      }
-      setUserName();
-      // console.log(user);
-    });
+    handleLogin()
+      .then((result) => {
+        navigate(redirect_uri);
+        const user = result.user;
+        setUserName();
+        if (!user.emailVerified) {
+          verifyEmail();
+        }
+        // else if (user.emailVerified) {
+        //   navigate("/user-profile");
+        // }
+        // console.log(user);
+        setError("");
+      })
+      .catch((error) => {
+        if (error.message === "Firebase: Error (auth/wrong-password).") {
+          setError("Wrong Password");
+        } else if (error.message === "Firebase: Error (auth/user-not-found).") {
+          setError("User not found");
+        } else if (error.message === "Firebase: Error (auth/invalid-email).") {
+          setError("Invalid Email");
+        } else if (
+          error.message === "Firebase: Error (auth/email-already-in-use)."
+        ) {
+          setError("Email already in use");
+        } else {
+          setError(error.message);
+        }
+      });
   };
 
   // google login handler
@@ -118,6 +140,7 @@ const Login = () => {
               id="outlined-basic"
               label="Email"
               variant="outlined"
+              required
             />
           </div>
           <div className="login-form-wraper">
@@ -132,6 +155,7 @@ const Login = () => {
               </InputLabel>
               <OutlinedInput
                 id="outlined-adornment-password"
+                required
                 type={values.showPassword ? "text" : "password"}
                 value={values.password}
                 onChange={handleChange("password")}
@@ -161,6 +185,10 @@ const Login = () => {
             ----------- <span>Or</span> ----------
           </h3>
         </form>
+        {/* error message */}
+        <div className="mt-3">
+          {error && <Alert severity="error">{error}</Alert>}
+        </div>
         <div>
           {/* google sign in btn */}
           <button onClick={handleGoogleLogIn} className="google-signin-btn">

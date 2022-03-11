@@ -29,7 +29,7 @@ export const UserProfile = () => {
 
   useEffect(() => {
     if (user?.photoURL) {
-      setPhotoURL(user.photoURL);
+      setPhotoURL(user?.photoURL);
     }
   }, [user]);
 
@@ -62,8 +62,8 @@ export const UserProfile = () => {
                   type="file"
                   id="file-input"
                 />
-                <span className="font-weight-bold">{user.displayName}</span>
-                <p className="text-black-50">{user.email}</p>
+                <span className="font-weight-bold">{user?.displayName}</span>
+                <p className="text-black-50">{user?.email}</p>
                 <span> </span>
               </div>
             </div>
@@ -78,17 +78,17 @@ export const UserProfile = () => {
                     <input
                       type="text"
                       className="form-control"
-                      placeholder="first name"
-                      value=""
+                      placeholder={user?.displayName}
+                      value={user?.displayName}
                     />
                   </div>
                   <div className="col-md-6">
-                    <label className="labels">Surname</label>
+                    <label className="labels">Email ID</label>
                     <input
                       type="text"
                       className="form-control"
-                      value=""
-                      placeholder="surname"
+                      placeholder={user.email}
+                      value={user.email}
                     />
                   </div>
                 </div>
@@ -103,14 +103,15 @@ export const UserProfile = () => {
                     />
                   </div>
                   <div className="col-md-6">
-                    <label className="labels">Email ID</label>
+                    <label className="labels">Country</label>
                     <input
                       type="text"
                       className="form-control"
-                      placeholder="enter email id"
+                      placeholder="country"
                       value=""
                     />
                   </div>
+
                   <div className="col-md-12">
                     <label className="labels">Address Line 1</label>
                     <input
@@ -141,26 +142,6 @@ export const UserProfile = () => {
                     />
                   </div>
                   <div className="col-md-6">
-                    <label className="labels">Area</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      value=""
-                      placeholder="Enter Area"
-                    />
-                  </div>
-                </div>
-                <div className="row mt-3">
-                  <div className="col-md-6">
-                    <label className="labels">Country</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="country"
-                      value=""
-                    />
-                  </div>
-                  <div className="col-md-6">
                     <label className="labels">State/Region</label>
                     <input
                       type="text"
@@ -170,7 +151,8 @@ export const UserProfile = () => {
                     />
                   </div>
                 </div>
-                <div className="mt-5 text-center">
+
+                <div className="mt-5 text-end">
                   <button
                     onClick={handleSaveClick}
                     className="btn btn-primary profile-button"
