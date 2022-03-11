@@ -54,11 +54,11 @@ const Login = () => {
       navigate(redirect_uri);
       const user = result.user;
       setError("");
-      setUserName();
       if (!user.emailVerified) {
         verifyEmail();
       }
-      console.log(user);
+      setUserName();
+      // console.log(user);
     });
   };
 

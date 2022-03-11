@@ -30,9 +30,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Register = () => {
-  // const [name, setName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [pass, setPass] = useState("");
   const {
     signInUsingGoogle,
     handleRegister,
@@ -58,7 +55,7 @@ const Register = () => {
       setError("");
       verifyEmail();
       setUserName();
-      console.log(user);
+      // console.log(user);
     });
   };
 
@@ -90,26 +87,6 @@ const Register = () => {
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
-  // registration handler
-  // const handleRegister = (event) => {
-  //   event.preventDefault();
-  //   console.log(name, email, pass);
-  // };
-  // Name change handler
-  // const handleNameChange = (event) => {
-  //   console.log(event.target.value);
-  //   setName(event.target.value);
-  // };
-  // Email change handler
-  // const handleEmailChange = (event) => {
-  //   console.log(event.target.value);
-  //   setEmail(event.target.value);
-  // };
-  // Password change handler
-  // const handlePassChange = (event) => {
-  //   console.log(event.target.value);
-  //   setPass(event.target.value);
-  // };
 
   return (
     <div className="register-page-main">

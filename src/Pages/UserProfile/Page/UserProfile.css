@@ -17,7 +17,34 @@
 .user-photo {
   width: 150px !important;
   height: 150px !important;
+  z-index: 1;
 }
+.user-photo::after {
+  content: "Upload Photo";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  color: white;
+  font-size: 16px;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 40%;
+  background: rgba(0, 0, 0, 0.726);
+  transition: 0.5s ease;
+}
+.user-photo:hover::after {
+  opacity: 1;
+}
+/* .photo-label h6 {
+  background-color: rgba(0, 0, 0, 0.548);
+  color: white;
+  padding: 25px;
+  margin-top: -50px;
+  border-radius: 50%;
+  z-index: 5 !important;
+} */
 .user-profile-container {
   width: 70%;
 }

@@ -7,13 +7,19 @@ import "./UserProfile.css";
 
 export const UserProfile = () => {
   const { user, uploadImage } = useAuth();
+  // const [imageChange, setImageChange] = useState(null);
   const [photo, setPhoto] = useState(null);
   const [photoURL, setPhotoURL] = useState("");
 
   // upload image onchange handler
   const handleFileChange = (e) => {
+    const reader = new FileReader();
     if (e.target.files[0]) {
       setPhoto(e.target.files[0]);
+      reader.onload = (e) => {
+        setPhotoURL(e.target.result);
+      };
+      reader.readAsDataURL(e.target.files[0]);
     }
   };
 

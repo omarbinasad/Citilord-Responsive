@@ -37,12 +37,13 @@ const useFirebase = () => {
   const storage = getStorage();
   const googleProvider = new GoogleAuthProvider();
 
+  // image storage function
   async function uploadImage(file, user) {
     const fileRef = ref(storage, `${user.uid}/profile.jpg`);
     const snapshot = await uploadBytes(fileRef, file);
-    const downloadURL = await getDownloadURL(fileRef);
+    const downloadURL = await getDownloadURL(fileRef, snapshot);
     updateProfile(user, { photoURL: downloadURL });
-    alert("Image uploaded");
+    alert("Profile Updated");
   }
 
   // Registration handler Function
@@ -72,7 +73,7 @@ const useFirebase = () => {
   // Email verification function
   const verifyEmail = () => {
     sendEmailVerification(auth.currentUser).then((result) => {
-      console.log(result);
+      // console.log(result);
     });
   };
   // Password Reset handler
@@ -97,12 +98,12 @@ const useFirebase = () => {
   };
   // Name onchange handler
   const handleNameChange = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setName(event.target.value);
   };
   // Email onchange handler
   const handleEmailChange = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setEmail(event.target.value);
   };
   // Password onchange handler
