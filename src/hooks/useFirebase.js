@@ -44,7 +44,6 @@ const useFirebase = () => {
     const snapshot = await uploadBytes(fileRef, file);
     const downloadURL = await getDownloadURL(fileRef, snapshot);
     updateProfile(user, { photoURL: downloadURL });
-    alert("Profile Updated");
   }
 
   // Registration handler Function

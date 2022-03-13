@@ -7,6 +7,7 @@ import {
   Tabs,
   Typography,
 } from "@material-ui/core";
+import Alert from "@material-ui/lab/Alert";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import React, { useEffect, useState } from "react";
@@ -72,6 +73,7 @@ export const UserDashBoard = () => {
   // const [imageChange, setImageChange] = useState(null);
   const [photo, setPhoto] = useState(null);
   const [photoURL, setPhotoURL] = useState("");
+  const [isAlert, setIsAlert] = useState(false);
 
   // upload image onchange handler
   const handleFileChange = (e) => {
@@ -87,6 +89,10 @@ export const UserDashBoard = () => {
 
   const handleSaveClick = () => {
     uploadImage(photo, user);
+    setIsAlert(true);
+    setTimeout(() => {
+      setIsAlert(false);
+    }, 5000);
   };
 
   useEffect(() => {
@@ -97,6 +103,17 @@ export const UserDashBoard = () => {
 
   return (
     <div className="">
+      {isAlert && (
+        <div
+          data-aos="fade-left"
+          data-aos-duration="600"
+          className="alert-msg-box"
+        >
+          <Alert severity="success" variant="filled">
+            Successfully updated your profile
+          </Alert>
+        </div>
+      )}
       {!isLoading && (
         <div className="user-dahboard-main rounded bg-white mt-5 mb-5">
           {user.emailVerified ? (
@@ -156,89 +173,8 @@ export const UserDashBoard = () => {
                       Item Three
                     </TabPanel>
                   </div>
-                  {/* <div className="d-flex justify-content-between align-items-center mb-3">
-                  <h4 className="text-right">Profile Settings</h4>
-                </div>
-                <div className="row mt-2">
-                  <div className="col-md-6">
-                    <label className="labels">Name</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder={user?.displayName}
-                      value={user?.displayName}
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <label className="labels">Email ID</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder={user.email}
-                      value={user.email}
-                    />
-                  </div>
-                </div>
-                <div className="row mt-3">
-                  <div className="col-md-6">
-                    <label className="labels">Mobile Number</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="enter phone number"
-                      value=""
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <label className="labels">Country</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="country"
-                      value=""
-                    />
-                  </div>
 
-                  <div className="col-md-12">
-                    <label className="labels">Address Line 1</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="enter address line 1"
-                      value=""
-                    />
-                  </div>
-                  <div className="col-md-12">
-                    <label className="labels">Address Line 2</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="enter address line 2"
-                      value=""
-                    />
-                  </div>
-                </div>
-                <div className="row mt-2">
-                  <div className="col-md-6">
-                    <label className="labels">Post Code</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Enter Post Code"
-                      value=""
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <label className="labels">State/Region</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      value=""
-                      placeholder="state"
-                    />
-                  </div>
-                </div> */}
-                  <div className="mt-5 text-end">
+                  <div className="my-3 me-4 text-end">
                     <button
                       onClick={handleSaveClick}
                       className="btn btn-primary profile-button"
