@@ -9,7 +9,7 @@ const RedirectRoute = ({ children, ...rest }) => {
   if (!user.emailVerified) {
     return children;
   }
-  return <Navigate to="/user-profile" state={{ from: location }} />;
+  return <Navigate to="/user-dashboard" state={{ from: location }} />;
 };
 
 export default RedirectRoute;

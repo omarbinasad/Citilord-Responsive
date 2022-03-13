@@ -31,12 +31,12 @@ import SingleRoom from "./Pages/SingleRoom/Page/SingleRoom";
 import AllRooms from "./Pages/AllRooms/AllRooms";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { UserProfile } from "./Pages/UserProfile/Page/UserProfile";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import AuthProvider from "./Context/AuthProvider";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import RedirectRoute from "./RedirectRoute/RedirectRout";
+import { UserDashBoard } from "./Pages/UserProfile/Page/UserDashBoard";
 
 const App = () => {
   useEffect(() => {
@@ -93,10 +93,10 @@ const App = () => {
           <Route path="/single-room" element={<SingleRoom />}></Route>
           <Route path="/all-rooms" element={<AllRooms />}></Route>
           <Route
-            path="/user-profile"
+            path="/user-dashboard"
             element={
               <PrivateRoute>
-                <UserProfile />
+                <UserDashBoard />
               </PrivateRoute>
             }
           ></Route>

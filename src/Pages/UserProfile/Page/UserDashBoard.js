@@ -1,11 +1,65 @@
-import { Avatar } from "@material-ui/core";
+import { AppBar, Avatar, Box, Tab, Tabs, Typography } from "@material-ui/core";
+import PropTypes from "prop-types";
+import { makeStyles } from "@material-ui/core/styles";
 import React, { useEffect, useState } from "react";
 import useAuth from "../../../hooks/useAuth";
+import UserBookings from "../Components/UserBookings/UserBookings";
+import UserProfile from "../Components/UserProfile/UserProfile";
 // import useFirebase from "../../../hooks/useFirebase";
-import "./UserProfile.css";
-// import { getStorage, ref, uploadBytes } from "firebase/storage";
+import "./UserDashBoard.css";
 
-export const UserProfile = () => {
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box p={3}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    // backgroundColor: theme.palette.background.paper,
+    color: "black",
+  },
+  tabStyle: {
+    color: "black",
+  },
+}));
+
+export const UserDashBoard = () => {
+  const classes = useStyles();
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   const { user, uploadImage } = useAuth();
   // const [imageChange, setImageChange] = useState(null);
   const [photo, setPhoto] = useState(null);
@@ -35,22 +89,12 @@ export const UserProfile = () => {
 
   return (
     <div className="">
-      <div className="user-profile-main rounded bg-white mt-5 mb-5">
+      <div className="user-dahboard-main rounded bg-white mt-5 mb-5">
         {user.emailVerified ? (
-          <div className="user-profile-container shadow row">
-            <div className="col-md-4 border-right">
+          <div className="user-dashboard-container shadow row">
+            <div className="col-md-3 dashboard-left">
               <div className="d-flex flex-column align-items-center text-center p-3 py-5">
                 <label className="photo-label" for="file-input">
-                  {/* <img
-                    className="user-photo rounded-circle mt-5"
-                    width="150px"
-                    alt=""
-                    src={
-                      user.photoURL
-                        ? user.photoURL
-                        : ""
-                    }
-                  /> */}
                   <Avatar
                     className="user-photo rounded-circle mt-5"
                     src={photoURL}
@@ -67,9 +111,43 @@ export const UserProfile = () => {
                 <span> </span>
               </div>
             </div>
-            <div className="col-md-7 border-right">
-              <div className="p-3 py-5">
-                <div className="d-flex justify-content-between align-items-center mb-3">
+            <div className="col-md-9 border-right">
+              <div className="">
+                <div className={classes.root}>
+                  <AppBar position="static">
+                    <Tabs
+                      value={value}
+                      onChange={handleChange}
+                      aria-label="simple tabs example"
+                      TabIndicatorProps={{
+                        style: {
+                          backgroundColor: "#1ead01",
+                        },
+                      }}
+                    >
+                      <Tab
+                        className={classes.tabStyle}
+                        label="Profile"
+                        {...a11yProps(0)}
+                      />
+                      <Tab
+                        className={classes.tabStyle}
+                        label="Bookings"
+                        {...a11yProps(1)}
+                      />
+                    </Tabs>
+                  </AppBar>
+                  <TabPanel value={value} index={0}>
+                    <UserProfile />
+                  </TabPanel>
+                  <TabPanel value={value} index={1}>
+                    <UserBookings />
+                  </TabPanel>
+                  <TabPanel value={value} index={2}>
+                    Item Three
+                  </TabPanel>
+                </div>
+                {/* <div className="d-flex justify-content-between align-items-center mb-3">
                   <h4 className="text-right">Profile Settings</h4>
                 </div>
                 <div className="row mt-2">
@@ -150,8 +228,7 @@ export const UserProfile = () => {
                       placeholder="state"
                     />
                   </div>
-                </div>
-
+                </div> */}
                 <div className="mt-5 text-end">
                   <button
                     onClick={handleSaveClick}

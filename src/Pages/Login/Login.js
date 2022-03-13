@@ -48,7 +48,7 @@ const Login = () => {
   } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
-  const redirect_uri = location?.state?.from || "/user-profile";
+  const redirect_uri = location?.state?.from || "/user-dashboard";
   // redirects login handler
 
   const handleLoginRedirects = (e) => {
@@ -62,7 +62,7 @@ const Login = () => {
           verifyEmail();
         }
         // else if (user.emailVerified) {
-        //   navigate("/user-profile");
+        //   navigate("/user-dashboard");
         // }
         // console.log(user);
         setError("");

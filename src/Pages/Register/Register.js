@@ -120,6 +120,7 @@ const Register = () => {
                 classes.textField
               )}
               onBlur={handleNameChange}
+              type="text"
               id="outlined-basic"
               label="Name"
               name="name"

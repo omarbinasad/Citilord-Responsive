@@ -29,7 +29,14 @@ const CardTab = (props) => {
       {/* Card Tab */}
 
       <TabContext value={value}>
-        <TabList onChange={handleChange}>
+        <TabList
+          onChange={handleChange}
+          TabIndicatorProps={{
+            style: {
+              backgroundColor: "#1ead01",
+            },
+          }}
+        >
           <Tab label="SHORT LET" value="1" className={classes.tabText} />
           <Tab label="LONG LET" value="2" className={classes.tabText} />
           <Tab label="SELL" value="3" className={classes.tabText} />

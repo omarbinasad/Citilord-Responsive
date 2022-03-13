@@ -192,7 +192,6 @@ const Banner = () => {
     <div>
       <div
         data-aos="zoom-in"
-       
         className="banner-wrapper-main d-flex align-items-center justify-content-center"
       >
         <div className="welcome-and-icons-container">
@@ -237,6 +236,11 @@ const Banner = () => {
                   onChange={handleChange}
                   aria-label="simple tabs example"
                   backgroundColor="transparent"
+                  TabIndicatorProps={{
+                    style: {
+                      backgroundColor: "#1ead01",
+                    },
+                  }}
                 >
                   {/* <Tab
                     label={iconToolTipPlace()}
