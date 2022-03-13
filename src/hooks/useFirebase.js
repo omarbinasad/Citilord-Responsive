@@ -22,6 +22,7 @@ const useFirebase = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
   const [values, setValues] = useState({
     amount: "",
     password: "",
@@ -135,9 +136,14 @@ const useFirebase = () => {
   // };
   // logout function
   const LogOut = () => {
-    signOut(auth).then(() => {
-      setUser({});
-    });
+    setIsLoading(true);
+    signOut(auth)
+      .then(() => {
+        setUser({});
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   useEffect(() => {
@@ -146,6 +152,7 @@ const useFirebase = () => {
         // console.log("inside state change", user);
         setUser(user);
       }
+      setIsLoading(false);
     });
   }, []);
 
@@ -166,6 +173,8 @@ const useFirebase = () => {
     setUserName,
     verifyEmail,
     uploadImage,
+    isLoading,
+    setIsLoading,
   };
 };
 

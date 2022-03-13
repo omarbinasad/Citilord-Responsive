@@ -15,6 +15,7 @@ import GoogleLogo from "../Login/google-logo.png";
 // import useFirebase from "../../hooks/useFirebase";
 import { Alert } from "@material-ui/lab";
 import useAuth from "../../hooks/useAuth";
+import { CircularProgress } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -42,18 +43,20 @@ const Register = () => {
     verifyEmail,
     setUserName,
     error,
+    isLoading,
+    setIsLoading,
   } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
-  const redirect_uri = location?.state?.from || "/user-profile";
+  const redirect_uri = location?.state?.from || "/user-dashboard";
 
   const handleRegisterRedirects = (e) => {
     e.preventDefault();
+    setIsLoading(true);
     handleRegister()
       .then((result) => {
         navigate(redirect_uri);
         const user = result.user;
-
         verifyEmail();
         setUserName();
         setError("");
@@ -61,6 +64,9 @@ const Register = () => {
       })
       .catch((error) => {
         setError(error.message);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   };
 
@@ -95,106 +101,117 @@ const Register = () => {
 
   return (
     <div className="register-page-main">
-      <div
-        data-aos="zoom-in"
-        data-aos-once="true"
-        data-aos-duration="800"
-        className="register-form-div"
-      >
-        <h1 data-aos="fade-down" data-aos-once="true">
-          Register
-        </h1>
-        <form onSubmit={handleRegisterRedirects} className="register-form">
-          <div className="register-form-wraper">
-            {/* <label for="email">Email</label>
+      {!isLoading && (
+        <div
+          data-aos="zoom-in"
+          data-aos-once="true"
+          data-aos-duration="800"
+          className="register-form-div"
+        >
+          <h1 data-aos="fade-down" data-aos-once="true">
+            Register
+          </h1>
+          <form onSubmit={handleRegisterRedirects} className="register-form">
+            <div className="register-form-wraper">
+              {/* <label for="email">Email</label>
           <input
             type="email"
             name="email"
             autocomplete="off"
             placeholder="email@example.com"
           /> */}
-            <TextField
-              className={clsx(
-                classes.margin,
-                classes.border,
-                classes.textField
-              )}
-              onBlur={handleNameChange}
-              type="text"
-              id="outlined-basic"
-              label="Name"
-              name="name"
-              variant="outlined"
-              required
-            />
-          </div>
-          <div className="register-form-wraper">
-            <TextField
-              className={clsx(
-                classes.margin,
-                classes.border,
-                classes.textField
-              )}
-              onBlur={handleEmailChange}
-              type="email"
-              id=""
-              label="Email"
-              variant="outlined"
-              required
-            />
-          </div>
-          <div className="register-form-wraper">
-            {/* <label for="password">Password</label>
-          <input type="password" name="password" /> */}
-            <FormControl
-              className={clsx(classes.margin, classes.textField)}
-              variant="outlined"
-            >
-              <InputLabel htmlFor="outlined-adornment-password">
-                Password
-              </InputLabel>
-              <OutlinedInput
+              <TextField
+                className={clsx(
+                  classes.margin,
+                  classes.border,
+                  classes.textField
+                )}
+                onBlur={handleNameChange}
+                type="text"
+                id="outlined-basic"
+                label="Name"
+                name="name"
+                variant="outlined"
                 required
-                id="outlined-adornment-password"
-                type={values.showPassword ? "text" : "password"}
-                value={values.password}
-                onChange={handleChange("password")}
-                endAdornment={
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label="toggle password visibility"
-                      onClick={handleClickShowPassword}
-                      onMouseDown={handleMouseDownPassword}
-                      edge="end"
-                    >
-                      {values.showPassword ? <Visibility /> : <VisibilityOff />}
-                    </IconButton>
-                  </InputAdornment>
-                }
-                labelWidth={70}
               />
-            </FormControl>
-          </div>
-          <button className="register-submit-btn" type="submit">
-            Register
-          </button>
-        </form>
+            </div>
+            <div className="register-form-wraper">
+              <TextField
+                className={clsx(
+                  classes.margin,
+                  classes.border,
+                  classes.textField
+                )}
+                onBlur={handleEmailChange}
+                type="email"
+                id=""
+                label="Email"
+                variant="outlined"
+                required
+              />
+            </div>
+            <div className="register-form-wraper">
+              {/* <label for="password">Password</label>
+          <input type="password" name="password" /> */}
+              <FormControl
+                className={clsx(classes.margin, classes.textField)}
+                variant="outlined"
+              >
+                <InputLabel htmlFor="outlined-adornment-password">
+                  Password
+                </InputLabel>
+                <OutlinedInput
+                  required
+                  id="outlined-adornment-password"
+                  type={values.showPassword ? "text" : "password"}
+                  value={values.password}
+                  onChange={handleChange("password")}
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="toggle password visibility"
+                        onClick={handleClickShowPassword}
+                        onMouseDown={handleMouseDownPassword}
+                        edge="end"
+                      >
+                        {values.showPassword ? (
+                          <Visibility />
+                        ) : (
+                          <VisibilityOff />
+                        )}
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                  labelWidth={70}
+                />
+              </FormControl>
+            </div>
+            <button className="register-submit-btn" type="submit">
+              Register
+            </button>
+          </form>
 
-        {/* error message */}
-        <div className="mt-3">
-          {error && <Alert severity="error">{error}</Alert>}
+          {/* error message */}
+          <div className="mt-3">
+            {error && <Alert severity="error">{error}</Alert>}
+          </div>
+          <h3 className="or-text">
+            ----------- <span>Or</span> ----------
+          </h3>
+          <div>
+            {/* google sign in btn */}
+            <button onClick={handleGoogleLogIn} className="google-signin-btn">
+              <img className="text-start" src={GoogleLogo} alt="" />
+              <span>Continue with google</span>
+            </button>
+          </div>
         </div>
-        <h3 className="or-text">
-          ----------- <span>Or</span> ----------
-        </h3>
-        <div>
-          {/* google sign in btn */}
-          <button onClick={handleGoogleLogIn} className="google-signin-btn">
-            <img className="text-start" src={GoogleLogo} alt="" />
-            <span>Continue with google</span>
-          </button>
+      )}
+      {isLoading && (
+        <div className="loading-div">
+          <CircularProgress color="success" />
         </div>
-      </div>
+      )}
       <h6 className="bottom-text mt-3">
         Already have an account? <Link to="/user-login">Log in</Link>
       </h6>

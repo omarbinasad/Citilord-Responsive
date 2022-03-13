@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./NavBar.css";
-// import Logo from "../citiLordlogo.png.png";
 import Logo from "./citilordLogo.png";
 import { NavLink } from "react-router-dom";
-
 import {
   Avatar,
   Button,
@@ -17,9 +15,8 @@ import {
 import SearchShortlet from "../../../Pages/Home/components/DialogSearchBox/SearchShortlet/SearchShortlet";
 import SearchLonglet from "../../../Pages/Home/components/DialogSearchBox/SearchLonglet/SearchLonglet";
 import SearchForSale from "../../../Pages/Home/components/DialogSearchBox/SearchForSale/SearchForSale";
-import { CallMissedSharp, Cancel, Close } from "@material-ui/icons";
+import { CallMissedSharp, Cancel } from "@material-ui/icons";
 import useAuth from "../../../hooks/useAuth";
-// import useFirebase from "../../../hooks/useFirebase";
 
 const NavBar = () => {
   const { user, LogOut } = useAuth();

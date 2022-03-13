@@ -1,4 +1,12 @@
-import { AppBar, Avatar, Box, Tab, Tabs, Typography } from "@material-ui/core";
+import {
+  AppBar,
+  Avatar,
+  Box,
+  CircularProgress,
+  Tab,
+  Tabs,
+  Typography,
+} from "@material-ui/core";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import React, { useEffect, useState } from "react";
@@ -60,7 +68,7 @@ export const UserDashBoard = () => {
     setValue(newValue);
   };
 
-  const { user, uploadImage } = useAuth();
+  const { user, uploadImage, isLoading } = useAuth();
   // const [imageChange, setImageChange] = useState(null);
   const [photo, setPhoto] = useState(null);
   const [photoURL, setPhotoURL] = useState("");
@@ -89,65 +97,66 @@ export const UserDashBoard = () => {
 
   return (
     <div className="">
-      <div className="user-dahboard-main rounded bg-white mt-5 mb-5">
-        {user.emailVerified ? (
-          <div className="user-dashboard-container shadow row">
-            <div className="col-md-3 dashboard-left">
-              <div className="d-flex flex-column align-items-center text-center p-3 py-5">
-                <label className="photo-label" for="file-input">
-                  <Avatar
-                    className="user-photo rounded-circle mt-5"
-                    src={photoURL}
+      {!isLoading && (
+        <div className="user-dahboard-main rounded bg-white mt-5 mb-5">
+          {user.emailVerified ? (
+            <div className="user-dashboard-container shadow row">
+              <div className="col-md-3 dashboard-left">
+                <div className="d-flex flex-column align-items-center text-center p-3 py-5">
+                  <label className="photo-label" for="file-input">
+                    <Avatar
+                      className="user-photo rounded-circle mt-5"
+                      src={photoURL}
+                    />
+                  </label>
+                  <input
+                    onChange={handleFileChange}
+                    style={{ visibility: "hidden" }}
+                    type="file"
+                    id="file-input"
                   />
-                </label>
-                <input
-                  onChange={handleFileChange}
-                  style={{ visibility: "hidden" }}
-                  type="file"
-                  id="file-input"
-                />
-                <span className="font-weight-bold">{user?.displayName}</span>
-                <p className="text-black-50">{user?.email}</p>
-                <span> </span>
-              </div>
-            </div>
-            <div className="col-md-9 border-right">
-              <div className="">
-                <div className={classes.root}>
-                  <AppBar position="static">
-                    <Tabs
-                      value={value}
-                      onChange={handleChange}
-                      aria-label="simple tabs example"
-                      TabIndicatorProps={{
-                        style: {
-                          backgroundColor: "#1ead01",
-                        },
-                      }}
-                    >
-                      <Tab
-                        className={classes.tabStyle}
-                        label="Profile"
-                        {...a11yProps(0)}
-                      />
-                      <Tab
-                        className={classes.tabStyle}
-                        label="Bookings"
-                        {...a11yProps(1)}
-                      />
-                    </Tabs>
-                  </AppBar>
-                  <TabPanel value={value} index={0}>
-                    <UserProfile />
-                  </TabPanel>
-                  <TabPanel value={value} index={1}>
-                    <UserBookings />
-                  </TabPanel>
-                  <TabPanel value={value} index={2}>
-                    Item Three
-                  </TabPanel>
+                  <span className="font-weight-bold">{user?.displayName}</span>
+                  <p className="text-black-50">{user?.email}</p>
+                  <span> </span>
                 </div>
-                {/* <div className="d-flex justify-content-between align-items-center mb-3">
+              </div>
+              <div className="col-md-9 border-right">
+                <div className="">
+                  <div className={classes.root}>
+                    <AppBar position="static">
+                      <Tabs
+                        value={value}
+                        onChange={handleChange}
+                        aria-label="simple tabs example"
+                        TabIndicatorProps={{
+                          style: {
+                            backgroundColor: "#1ead01",
+                          },
+                        }}
+                      >
+                        <Tab
+                          className={classes.tabStyle}
+                          label="Profile"
+                          {...a11yProps(0)}
+                        />
+                        <Tab
+                          className={classes.tabStyle}
+                          label="Bookings"
+                          {...a11yProps(1)}
+                        />
+                      </Tabs>
+                    </AppBar>
+                    <TabPanel value={value} index={0}>
+                      <UserProfile />
+                    </TabPanel>
+                    <TabPanel value={value} index={1}>
+                      <UserBookings />
+                    </TabPanel>
+                    <TabPanel value={value} index={2}>
+                      Item Three
+                    </TabPanel>
+                  </div>
+                  {/* <div className="d-flex justify-content-between align-items-center mb-3">
                   <h4 className="text-right">Profile Settings</h4>
                 </div>
                 <div className="row mt-2">
@@ -229,27 +238,33 @@ export const UserDashBoard = () => {
                     />
                   </div>
                 </div> */}
-                <div className="mt-5 text-end">
-                  <button
-                    onClick={handleSaveClick}
-                    className="btn btn-primary profile-button"
-                    type="button"
-                  >
-                    Save Profile
-                  </button>
+                  <div className="mt-5 text-end">
+                    <button
+                      onClick={handleSaveClick}
+                      className="btn btn-primary profile-button"
+                      type="button"
+                    >
+                      Save Profile
+                    </button>
+                  </div>
                 </div>
               </div>
+              {/* <div className="col-md-4"></div> */}
             </div>
-            {/* <div className="col-md-4"></div> */}
-          </div>
-        ) : (
-          <div className="user-profile-ver-main rounded bg-white mt-5 mb-5">
-            <div className="user-profile-ver-container shadow row">
-              <h3>A verification link has been sent to your email account</h3>
+          ) : (
+            <div className="user-profile-ver-main rounded bg-white mt-5 mb-5">
+              <div className="user-profile-ver-container shadow row">
+                <h3>A verification link has been sent to your email account</h3>
+              </div>
             </div>
-          </div>
-        )}
-      </div>
+          )}
+        </div>
+      )}
+      {isLoading && (
+        <div className="user-dahboard-main rounded bg-white mt-5 mb-5">
+          <CircularProgress color="success" />
+        </div>
+      )}
     </div>
   );
 };

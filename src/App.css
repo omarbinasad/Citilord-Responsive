@@ -23,3 +23,9 @@ legend {
   box-shadow: none;
   border-color: rgb(30, 173, 1);
 }
+
+.loading-div {
+  display: flex;
+  align-items: center;
+  height: 60vh;
+}
